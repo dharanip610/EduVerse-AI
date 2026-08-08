@@ -1,0 +1,94 @@
+/* ==========================================
+   ADMIN CHAPTERS
+========================================== */
+
+/* ---------- Header ---------- */
+
+.admin-chapters .page-header{
+    margin-bottom:30px;
+}
+
+/* ---------- Form ---------- */
+
+.chapter-form{
+    display:grid;
+    grid-template-columns:2fr 2fr 1fr;
+    gap:20px;
+}
+
+.chapter-form textarea{
+    grid-column:1/-1;
+    min-height:110px;
+}
+
+.chapter-form .form-error{
+    grid-column:1/-1;
+}
+
+.chapter-form .primary-btn{
+    grid-column:1/-1;
+}
+
+/* ---------- Subject Column ---------- */
+
+.chapter-subject{
+    font-weight:600;
+    color:var(--primary);
+}
+
+/* ---------- Chapter Title ---------- */
+
+.chapter-title{
+    font-weight:600;
+    color:var(--text);
+}
+
+/* ---------- Description ---------- */
+
+.chapter-description{
+    color:var(--text-light);
+    max-width:350px;
+    line-height:1.5;
+}
+
+/* ---------- Order Badge ---------- */
+
+.chapter-order{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-width:40px;
+    height:40px;
+    border-radius:50%;
+    background:var(--primary);
+    color:#fff;
+    font-weight:700;
+}
+
+/* ---------- Table ---------- */
+
+.admin-chapters .subjects-table td{
+    vertical-align:middle;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width:768px){
+
+    .chapter-form{
+        grid-template-columns:1fr;
+    }
+
+    .chapter-description{
+        max-width:200px;
+    }
+
+}
+
+@media (min-width:769px) and (max-width:1024px){
+
+    .chapter-form{
+        grid-template-columns:1fr;
+    }
+
+}

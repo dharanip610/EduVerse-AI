@@ -1,0 +1,848 @@
+/* ==========================================
+   MEMORY MATCH - PART 1
+   Layout + Header
+========================================== */
+
+/* ===========================
+   Page
+=========================== */
+
+.memory-page{
+
+    min-height:100vh;
+
+    padding:40px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    background:#f5f9ff;
+
+}
+
+/* ===========================
+   Heading
+=========================== */
+
+.memory-page h1{
+
+    font-size:40px;
+
+    color:#0f172a;
+
+    margin-bottom:10px;
+
+    font-weight:700;
+
+}
+
+.memory-page p{
+
+    color:#64748b;
+
+    font-size:16px;
+
+    margin-bottom:10px;
+
+    text-align:center;
+
+}
+
+/* ===========================
+   Stats
+=========================== */
+
+.memory-page p:last-of-type{
+
+    margin-bottom:35px;
+
+    padding:12px 22px;
+
+    background:#dbeafe;
+
+    color:#2563eb;
+
+    border-radius:999px;
+
+    font-weight:700;
+
+}
+
+/* ===========================
+   Board
+=========================== */
+
+.memory-board{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,100px);
+
+    gap:18px;
+
+    justify-content:center;
+
+}
+
+/* ===========================
+   Dark Theme
+=========================== */
+
+body.dark .memory-page{
+
+    background:#020617;
+
+}
+
+body.dark .memory-page h1{
+
+    color:#f8fafc;
+
+}
+
+body.dark .memory-page p{
+
+    color:#cbd5e1;
+
+}
+
+body.dark .memory-page p:last-of-type{
+
+    background:#1e40af;
+
+    color:#dbeafe;
+
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media(max-width:992px){
+
+.memory-board{
+
+    grid-template-columns:repeat(4,90px);
+
+}
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media(max-width:768px){
+
+.memory-page{
+
+    padding:20px;
+
+}
+
+.memory-page h1{
+
+    font-size:30px;
+
+}
+
+.memory-board{
+
+    grid-template-columns:repeat(4,70px);
+
+    gap:12px;
+
+}
+
+}
+/* ==========================================
+   MEMORY MATCH - PART 2
+   Cards
+========================================== */
+
+/* ===========================
+   Memory Card
+=========================== */
+
+.memory-card{
+
+    width:100px;
+
+    height:100px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border:none;
+
+    border-radius:22px;
+
+    cursor:pointer;
+
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #4f46e5
+    );
+
+    color:#ffffff;
+
+    font-size:40px;
+
+    font-weight:700;
+
+    box-shadow:0 18px 40px rgba(37,99,235,.22);
+
+    transition:
+        transform .35s,
+        box-shadow .35s,
+        background .35s;
+
+}
+
+/* ===========================
+   Hover
+=========================== */
+
+.memory-card:hover:not(:disabled){
+
+    transform:
+        translateY(-6px)
+        scale(1.05);
+
+    box-shadow:0 24px 50px rgba(37,99,235,.35);
+
+}
+
+/* ===========================
+   Active
+=========================== */
+
+.memory-card:active{
+
+    transform:scale(.95);
+
+}
+
+/* ===========================
+   Disabled / Matched
+=========================== */
+
+.memory-card:disabled{
+
+    cursor:default;
+
+    background:linear-gradient(
+        135deg,
+        #10b981,
+        #059669
+    );
+
+    color:#ffffff;
+
+}
+
+/* ===========================
+   Focus
+=========================== */
+
+.memory-card:focus-visible{
+
+    outline:none;
+
+    box-shadow:
+        0 0 0 5px rgba(37,99,235,.20);
+
+}
+
+/* ===========================
+   Flip Animation
+=========================== */
+
+.memory-card{
+
+    animation:memoryAppear .35s ease;
+
+}
+
+@keyframes memoryAppear{
+
+0%{
+
+    transform:scale(.8) rotateY(90deg);
+
+    opacity:0;
+
+}
+
+100%{
+
+    transform:scale(1) rotateY(0);
+
+    opacity:1;
+
+}
+
+}
+
+/* ===========================
+   Dark Theme
+=========================== */
+
+body.dark .memory-card{
+
+    background:linear-gradient(
+        135deg,
+        #1d4ed8,
+        #3730a3
+    );
+
+}
+
+body.dark .memory-card:disabled{
+
+    background:linear-gradient(
+        135deg,
+        #059669,
+        #047857
+    );
+
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media(max-width:992px){
+
+.memory-card{
+
+    width:90px;
+
+    height:90px;
+
+    font-size:34px;
+
+}
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media(max-width:768px){
+
+.memory-card{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:18px;
+
+    font-size:28px;
+
+}
+
+}
+/* ==========================================
+   MEMORY MATCH - PART 3
+   Win Screen
+========================================== */
+
+/* ===========================
+   Win Overlay
+=========================== */
+
+.memory-win-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+
+    background:rgba(15,23,42,.70);
+
+    backdrop-filter:blur(8px);
+
+    z-index:999;
+
+}
+
+/* ===========================
+   Win Card
+=========================== */
+
+.memory-win-card{
+
+    width:100%;
+
+    max-width:550px;
+
+    background:#ffffff;
+
+    border-radius:28px;
+
+    padding:40px;
+
+    text-align:center;
+
+    border:1px solid rgba(37,99,235,.08);
+
+    box-shadow:0 25px 60px rgba(15,23,42,.20);
+
+    animation:winPopup .35s ease;
+
+}
+
+@keyframes winPopup{
+
+0%{
+
+    transform:scale(.8);
+
+    opacity:0;
+
+}
+
+100%{
+
+    transform:scale(1);
+
+    opacity:1;
+
+}
+
+}
+
+/* ===========================
+   Headings
+=========================== */
+
+.memory-win-card h1{
+
+    font-size:34px;
+
+    color:#0f172a;
+
+    margin-bottom:18px;
+
+}
+
+.memory-win-card h2{
+
+    font-size:24px;
+
+    color:#f59e0b;
+
+    margin:22px 0;
+
+}
+
+/* ===========================
+   Paragraphs
+=========================== */
+
+.memory-win-card p{
+
+    color:#475569;
+
+    font-size:16px;
+
+    line-height:1.8;
+
+    margin-bottom:12px;
+
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+.play-again-btn{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-top:14px;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:18px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+    transition:.35s;
+
+}
+
+/* First Button */
+
+.play-again-btn:first-of-type{
+
+    background:linear-gradient(
+        135deg,
+        #10b981,
+        #059669
+    );
+
+    box-shadow:0 16px 35px rgba(16,185,129,.25);
+
+}
+
+/* Second Button */
+
+.play-again-btn:last-of-type{
+
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #4f46e5
+    );
+
+    box-shadow:0 16px 35px rgba(37,99,235,.25);
+
+}
+
+.play-again-btn:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/* ===========================
+   Dark Theme
+=========================== */
+
+body.dark .memory-win-card{
+
+    background:#1e293b;
+
+    border:1px solid #334155;
+
+}
+
+body.dark .memory-win-card h1{
+
+    color:#f8fafc;
+
+}
+
+body.dark .memory-win-card p{
+
+    color:#cbd5e1;
+
+}
+
+body.dark .memory-win-card h2{
+
+    color:#fbbf24;
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media(max-width:768px){
+
+.memory-win-card{
+
+    padding:28px 22px;
+
+    border-radius:22px;
+
+}
+
+.memory-win-card h1{
+
+    font-size:28px;
+
+}
+
+.memory-win-card h2{
+
+    font-size:20px;
+
+}
+
+.memory-win-card p{
+
+    font-size:15px;
+
+}
+
+.play-again-btn{
+
+    padding:14px;
+
+    font-size:15px;
+
+}
+
+}
+/* ==========================================
+   MEMORY MATCH - PART 4
+   Premium Finish
+========================================== */
+
+/* ===========================
+   Premium Shine Effect
+=========================== */
+
+.memory-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.memory-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:70%;
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.30),
+        transparent
+    );
+
+    transition:.8s;
+
+    pointer-events:none;
+
+}
+
+.memory-card:hover::before{
+
+    left:130%;
+
+}
+
+/* ===========================
+   Premium Card Hover
+=========================== */
+
+.memory-card:hover:not(:disabled){
+
+    border:1px solid rgba(255,255,255,.30);
+
+}
+
+/* ===========================
+   Win Card Animation
+=========================== */
+
+.memory-win-card{
+
+    animation:
+        winPopup .35s ease,
+        floatCard 3s ease-in-out infinite;
+
+}
+
+@keyframes floatCard{
+
+0%,100%{
+
+    transform:translateY(0);
+
+}
+
+50%{
+
+    transform:translateY(-6px);
+
+}
+
+}
+
+/* ===========================
+   Button Active
+=========================== */
+
+.play-again-btn:active{
+
+    transform:scale(.97);
+
+}
+
+/* ===========================
+   Smooth Transitions
+=========================== */
+
+.memory-card,
+.play-again-btn,
+.memory-win-card{
+
+    transition:
+        transform .35s,
+        box-shadow .35s,
+        background .35s,
+        border-color .35s;
+
+}
+
+/* ===========================
+   Dark Theme Shine
+=========================== */
+
+body.dark .memory-card::before{
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.08),
+        transparent
+    );
+
+}
+
+/* ===========================
+   Large Desktop
+=========================== */
+
+@media(min-width:1400px){
+
+.memory-page{
+
+    max-width:1450px;
+
+    margin:auto;
+
+}
+
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media(max-width:992px){
+
+.memory-board{
+
+    gap:16px;
+
+}
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media(max-width:768px){
+
+.memory-board{
+
+    gap:10px;
+
+}
+
+.memory-page h1{
+
+    text-align:center;
+
+}
+
+.memory-page p{
+
+    text-align:center;
+
+}
+
+}
+
+/* ===========================
+   Small Mobile
+=========================== */
+
+@media(max-width:480px){
+
+.memory-board{
+
+    grid-template-columns:repeat(4,65px);
+
+}
+
+.memory-card{
+
+    width:65px;
+
+    height:65px;
+
+    font-size:24px;
+
+}
+
+}
+
+/* ===========================
+   Text Selection
+=========================== */
+
+::selection{
+
+    background:#2563eb;
+
+    color:#ffffff;
+
+}
+
+/* ===========================
+   Reduced Motion
+=========================== */
+
+@media(prefers-reduced-motion:reduce){
+
+*{
+
+    animation:none !important;
+
+    transition:none !important;
+
+    scroll-behavior:auto !important;
+
+}
+
+}

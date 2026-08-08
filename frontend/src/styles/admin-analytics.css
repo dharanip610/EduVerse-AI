@@ -1,0 +1,138 @@
+/* ==========================================
+   ADMIN ANALYTICS
+========================================== */
+
+/* ---------- Stats ---------- */
+
+.admin-analytics .stats-grid{
+    margin-bottom:30px;
+}
+
+/* ---------- Analytics Grid ---------- */
+
+.analytics-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:24px;
+}
+
+/* ---------- Cards ---------- */
+
+.analytics-grid .card{
+    padding:24px;
+}
+
+.analytics-grid .card h2{
+    margin-bottom:20px;
+    font-size:20px;
+    font-weight:700;
+    color:var(--text);
+}
+
+/* ---------- List ---------- */
+
+.analytics-list{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+}
+
+/* ---------- Item ---------- */
+
+.analytics-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:16px 18px;
+    border:1px solid var(--border);
+    border-radius:12px;
+    background:var(--card-bg);
+    transition:.3s;
+}
+
+.analytics-item:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.analytics-item strong{
+    display:block;
+    margin-bottom:6px;
+    color:var(--text);
+}
+
+.analytics-item p{
+    margin:0;
+    color:var(--text-light);
+    font-size:14px;
+}
+
+.analytics-item small{
+    color:var(--text-light);
+    white-space:nowrap;
+}
+
+/* ---------- Badge ---------- */
+
+.analytics-badge{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-width:70px;
+    padding:8px 14px;
+    border-radius:999px;
+    background:#dcfce7;
+    color:#15803d;
+    font-weight:700;
+}
+
+/* ---------- Empty ---------- */
+
+.empty-state{
+    text-align:center;
+    color:var(--text-light);
+    padding:40px 20px;
+}
+
+/* ---------- Dark Theme ---------- */
+
+[data-theme="dark"] .analytics-item{
+    background:rgba(255,255,255,.03);
+}
+
+[data-theme="dark"] .analytics-item:hover{
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
+}
+
+[data-theme="dark"] .analytics-badge{
+    background:rgba(34,197,94,.15);
+    color:#4ade80;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width:992px){
+
+    .analytics-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .analytics-grid .card{
+        padding:20px;
+    }
+
+    .analytics-item{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:12px;
+    }
+
+    .analytics-badge{
+        align-self:flex-start;
+    }
+
+}

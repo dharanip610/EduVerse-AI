@@ -1,0 +1,1072 @@
+/* ==========================================
+   LEADERBOARD PAGE - PART 1
+   Layout + Header
+========================================== */
+
+.leaderboard-page{
+
+    min-height:100vh;
+
+    padding:40px;
+
+    background:#f5f9ff;
+
+}
+
+/* ===========================
+   Header
+=========================== */
+
+.leaderboard-header{
+
+    margin-bottom:35px;
+
+    padding:35px;
+
+    border-radius:28px;
+
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #4f46e5
+    );
+
+    color:#ffffff;
+
+    box-shadow:0 20px 45px rgba(37,99,235,.18);
+
+}
+
+.leaderboard-header h1{
+
+    font-size:42px;
+
+    margin-bottom:12px;
+
+    font-weight:700;
+
+}
+
+.leaderboard-header p{
+
+    max-width:650px;
+
+    line-height:1.8;
+
+    opacity:.95;
+
+}
+
+/* ===========================
+   Loading Card
+=========================== */
+
+.loading-card{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:180px;
+
+    padding:30px;
+
+    margin-top:25px;
+
+    background:#ffffff;
+
+    border-radius:24px;
+
+    border:1px solid rgba(37,99,235,.08);
+
+    box-shadow:0 12px 35px rgba(15,23,42,.08);
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:#475569;
+
+}
+
+/* ===========================
+   Dark Theme
+=========================== */
+
+body.dark .leaderboard-page{
+
+    background:#020617;
+
+}
+
+body.dark .loading-card{
+
+    background:#1e293b;
+
+    border:1px solid #334155;
+
+    color:#f8fafc;
+
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media(max-width:992px){
+
+.leaderboard-header{
+
+    padding:28px;
+
+}
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media(max-width:768px){
+
+.leaderboard-page{
+
+    padding:20px;
+
+}
+
+.leaderboard-header{
+
+    padding:22px;
+
+    border-radius:22px;
+
+}
+
+.leaderboard-header h1{
+
+    font-size:30px;
+
+}
+
+.leaderboard-header p{
+
+    font-size:14px;
+
+}
+
+.loading-card{
+
+    min-height:140px;
+
+    font-size:16px;
+
+}
+
+}
+
+/* ===========================
+   Small Mobile
+=========================== */
+
+@media(max-width:480px){
+
+.leaderboard-header h1{
+
+    font-size:24px;
+
+}
+
+}
+/* ==========================================
+   LEADERBOARD PAGE - PART 2
+   Your Rank Card
+========================================== */
+
+/* ===========================
+   Your Rank Card
+=========================== */
+
+.your-rank-card{
+
+    margin-bottom:35px;
+
+    padding:32px;
+
+    border-radius:28px;
+
+    background:#ffffff;
+
+    border:1px solid rgba(37,99,235,.08);
+
+    box-shadow:0 18px 40px rgba(15,23,42,.08);
+
+    animation:rankFade .5s ease;
+
+}
+
+@keyframes rankFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.your-rank-card h2{
+
+    font-size:30px;
+
+    color:#0f172a;
+
+    margin-bottom:28px;
+
+}
+
+/* ===========================
+   Rank Details
+=========================== */
+
+.rank-details{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:22px;
+
+}
+
+/* ===========================
+   Stat Cards
+=========================== */
+
+.rank-details div{
+
+    padding:24px;
+
+    text-align:center;
+
+    border-radius:22px;
+
+    background:#f8fbff;
+
+    border:1px solid rgba(37,99,235,.08);
+
+    transition:.35s;
+
+}
+
+.rank-details div:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 18px 35px rgba(37,99,235,.12);
+
+}
+
+.rank-details strong{
+
+    display:block;
+
+    color:#64748b;
+
+    font-size:15px;
+
+    margin-bottom:12px;
+
+}
+
+.rank-details p:first-of-type{
+
+    font-size:30px;
+
+    font-weight:700;
+
+    color:#2563eb;
+
+    margin-bottom:8px;
+
+}
+
+.rank-details p:last-of-type{
+
+    color:#64748b;
+
+    font-size:14px;
+
+}
+
+/* ===========================
+   Different Colors
+=========================== */
+
+.rank-details div:nth-child(1){
+
+    border-top:5px solid #f59e0b;
+
+}
+
+.rank-details div:nth-child(2){
+
+    border-top:5px solid #2563eb;
+
+}
+
+.rank-details div:nth-child(3){
+
+    border-top:5px solid #10b981;
+
+}
+
+.rank-details div:nth-child(4){
+
+    border-top:5px solid #8b5cf6;
+
+}
+
+/* ===========================
+   Dark Theme
+=========================== */
+
+body.dark .your-rank-card{
+
+    background:#1e293b;
+
+    border:1px solid #334155;
+
+}
+
+body.dark .your-rank-card h2{
+
+    color:#f8fafc;
+
+}
+
+body.dark .rank-details div{
+
+    background:#334155;
+
+    border:1px solid #475569;
+
+}
+
+body.dark .rank-details strong{
+
+    color:#cbd5e1;
+
+}
+
+body.dark .rank-details p:first-of-type{
+
+    color:#60a5fa;
+
+}
+
+body.dark .rank-details p:last-of-type{
+
+    color:#94a3b8;
+
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media(max-width:992px){
+
+.rank-details{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media(max-width:768px){
+
+.your-rank-card{
+
+    padding:24px;
+
+}
+
+.your-rank-card h2{
+
+    font-size:24px;
+
+}
+
+.rank-details{
+
+    grid-template-columns:1fr;
+
+    gap:18px;
+
+}
+
+.rank-details p:first-of-type{
+
+    font-size:26px;
+
+}
+
+}
+/* ==========================================
+   LEADERBOARD PAGE - PART 3
+   Table
+========================================== */
+
+/* ===========================
+   Table
+=========================== */
+
+.leaderboard-table{
+
+    margin-top:30px;
+
+    background:#ffffff;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(37,99,235,.08);
+
+    box-shadow:0 18px 40px rgba(15,23,42,.08);
+
+}
+
+/* ===========================
+   Table Header
+=========================== */
+
+.table-head{
+
+    display:grid;
+
+    grid-template-columns:140px 1fr 170px;
+
+    align-items:center;
+
+    padding:22px 28px;
+
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #4f46e5
+    );
+
+    color:#ffffff;
+
+    font-weight:700;
+
+    font-size:15px;
+
+    letter-spacing:.5px;
+
+}
+
+/* ===========================
+   Table Row
+=========================== */
+
+.table-row{
+
+    display:grid;
+
+    grid-template-columns:140px 1fr 170px;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding:22px 28px;
+
+    border-bottom:1px solid #e2e8f0;
+
+    transition:.35s;
+
+    animation:rowFade .45s ease;
+
+}
+
+@keyframes rowFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.table-row:last-child{
+
+    border-bottom:none;
+
+}
+
+.table-row:hover{
+
+    background:#f8fbff;
+
+}
+
+/* ===========================
+   Rank
+=========================== */
+
+.table-row span:first-child{
+
+    font-weight:700;
+
+    font-size:18px;
+
+    color:#0f172a;
+
+}
+
+/* ===========================
+   Top 3 Rows
+=========================== */
+
+.table-row:nth-of-type(2){
+
+    background:#fff8e6;
+
+}
+
+.table-row:nth-of-type(3){
+
+    background:#f8fafc;
+
+}
+
+.table-row:nth-of-type(4){
+
+    background:#fff7ed;
+
+}
+
+.table-row:nth-of-type(2):hover,
+
+.table-row:nth-of-type(3):hover,
+
+.table-row:nth-of-type(4):hover{
+
+    filter:brightness(.98);
+
+}
+
+/* ===========================
+   Current User
+=========================== */
+
+.current-user{
+
+    border-left:6px solid #2563eb;
+
+    background:#eff6ff;
+
+}
+
+.current-user:hover{
+
+    background:#dbeafe;
+
+}
+
+/* ===========================
+   Student Info
+=========================== */
+
+.studentInfo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+}
+
+/* ===========================
+   XP Box
+=========================== */
+
+.xpBox{
+
+    text-align:right;
+
+    font-weight:700;
+
+    color:#2563eb;
+
+    line-height:1.7;
+
+}
+
+/* ===========================
+   Dark Theme
+=========================== */
+
+body.dark .leaderboard-table{
+
+    background:#1e293b;
+
+    border:1px solid #334155;
+
+}
+
+body.dark .table-row{
+
+    border-bottom:1px solid #334155;
+
+}
+
+body.dark .table-row:hover{
+
+    background:#334155;
+
+}
+
+body.dark .table-row span:first-child{
+
+    color:#f8fafc;
+
+}
+
+body.dark .xpBox{
+
+    color:#60a5fa;
+
+}
+
+body.dark .current-user{
+
+    background:#1e3a8a;
+
+}
+
+body.dark .current-user:hover{
+
+    background:#1d4ed8;
+
+}
+
+body.dark .table-row:nth-of-type(2){
+
+    background:#4a3a12;
+
+}
+
+body.dark .table-row:nth-of-type(3){
+
+    background:#374151;
+
+}
+
+body.dark .table-row:nth-of-type(4){
+
+    background:#4c2b16;
+
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media(max-width:992px){
+
+.table-head,
+
+.table-row{
+
+    grid-template-columns:100px 1fr 130px;
+
+}
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media(max-width:768px){
+
+.leaderboard-table{
+
+    overflow-x:auto;
+
+}
+
+.table-head,
+
+.table-row{
+
+    min-width:650px;
+
+}
+
+}
+/* ==========================================
+   LEADERBOARD PAGE - PART 4
+   Premium Finish
+========================================== */
+
+/* ===========================
+   Avatar
+=========================== */
+
+.leaderAvatar{
+
+    width:54px;
+
+    height:54px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:3px solid #dbeafe;
+
+    box-shadow:0 8px 18px rgba(37,99,235,.15);
+
+    transition:.35s;
+
+}
+
+.table-row:hover .leaderAvatar{
+
+    transform:scale(1.08);
+
+}
+
+/* ===========================
+   Initial Avatar
+=========================== */
+
+.leaderInitial{
+
+    width:54px;
+
+    height:54px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #4f46e5
+    );
+
+    color:#fff;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    flex-shrink:0;
+
+    box-shadow:0 10px 22px rgba(37,99,235,.20);
+
+    transition:.35s;
+
+}
+
+.table-row:hover .leaderInitial{
+
+    transform:scale(1.08);
+
+}
+
+/* ===========================
+   Student Details
+=========================== */
+
+.studentInfo strong{
+
+    display:block;
+
+    font-size:17px;
+
+    color:#0f172a;
+
+    margin-bottom:4px;
+
+}
+
+.studentInfo small{
+
+    color:#64748b;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+/* ===========================
+   XP Box
+=========================== */
+
+.xpBox{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-end;
+
+    gap:6px;
+
+    font-size:15px;
+
+    font-weight:700;
+
+}
+
+.xpBox strong{
+
+    color:#2563eb;
+
+}
+
+/* ===========================
+   Premium Glow
+=========================== */
+
+.table-row{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.table-row::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:80%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.45),
+
+        transparent
+
+    );
+
+    transition:.7s;
+
+}
+
+.table-row:hover::after{
+
+    left:130%;
+
+}
+
+/* ===========================
+   Dark Theme
+=========================== */
+
+body.dark .studentInfo strong{
+
+    color:#f8fafc;
+
+}
+
+body.dark .studentInfo small{
+
+    color:#cbd5e1;
+
+}
+
+body.dark .leaderAvatar{
+
+    border-color:#334155;
+
+}
+
+body.dark .leaderInitial{
+
+    background:linear-gradient(
+
+        135deg,
+
+        #3b82f6,
+
+        #6366f1
+
+    );
+
+}
+
+body.dark .table-row::after{
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.08),
+
+        transparent
+
+    );
+
+}
+
+/* ===========================
+   Desktop
+=========================== */
+
+@media(min-width:1400px){
+
+.leaderboard-page{
+
+    max-width:1500px;
+
+    margin:auto;
+
+}
+
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media(max-width:992px){
+
+.studentInfo strong{
+
+    font-size:16px;
+
+}
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media(max-width:768px){
+
+.leaderAvatar,
+
+.leaderInitial{
+
+    width:46px;
+
+    height:46px;
+
+    font-size:18px;
+
+}
+
+.studentInfo{
+
+    gap:12px;
+
+}
+
+.studentInfo strong{
+
+    font-size:15px;
+
+}
+
+.studentInfo small{
+
+    font-size:12px;
+
+}
+
+.xpBox{
+
+    font-size:14px;
+
+}
+
+}
+
+/* ===========================
+   Selection
+=========================== */
+
+::selection{
+
+    background:#2563eb;
+
+    color:#ffffff;
+
+}
+
+/* ===========================
+   Reduced Motion
+=========================== */
+
+@media(prefers-reduced-motion:reduce){
+
+*{
+
+    animation:none !important;
+
+    transition:none !important;
+
+    scroll-behavior:auto !important;
+
+}
+
+}

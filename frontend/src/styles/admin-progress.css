@@ -1,0 +1,135 @@
+/* ==========================================
+   ADMIN PROGRESS
+========================================== */
+
+/* ---------- Header ---------- */
+
+.admin-progress .page-header{
+    margin-bottom:30px;
+}
+
+/* ---------- Table ---------- */
+
+.admin-progress .subjects-table td{
+    vertical-align:middle;
+}
+
+/* ---------- Student ---------- */
+
+.student-name{
+    font-weight:700;
+    color:var(--text);
+    margin-bottom:4px;
+}
+
+.student-email{
+    color:var(--text-light);
+}
+
+/* ---------- Subject ---------- */
+
+.progress-subject{
+    font-weight:600;
+    color:var(--primary);
+}
+
+/* ---------- Progress Bar ---------- */
+
+.progress-bar{
+    width:140px;
+    height:10px;
+    border-radius:999px;
+    overflow:hidden;
+    background:var(--surface);
+}
+
+.progress-fill{
+    height:100%;
+    border-radius:999px;
+    background:linear-gradient(90deg,#3b82f6,#06b6d4);
+    transition:width .35s ease;
+}
+
+/* ---------- XP ---------- */
+
+.xp-badge{
+    display:inline-block;
+    padding:8px 14px;
+    border-radius:999px;
+    background:#fef3c7;
+    color:#b45309;
+    font-weight:700;
+}
+
+/* ---------- Status ---------- */
+
+.status-badge{
+    display:inline-block;
+    padding:8px 14px;
+    border-radius:999px;
+    font-size:13px;
+    font-weight:700;
+}
+
+.status-badge.beginner{
+    background:#e0f2fe;
+    color:#0369a1;
+}
+
+.status-badge.in-progress{
+    background:#fef3c7;
+    color:#b45309;
+}
+
+.status-badge.completed{
+    background:#dcfce7;
+    color:#15803d;
+}
+
+/* ---------- Dark ---------- */
+
+[data-theme="dark"] .xp-badge{
+    background:rgba(245,158,11,.15);
+    color:#fbbf24;
+}
+
+[data-theme="dark"] .status-badge.beginner{
+    background:rgba(14,165,233,.15);
+    color:#38bdf8;
+}
+
+[data-theme="dark"] .status-badge.in-progress{
+    background:rgba(245,158,11,.15);
+    color:#fbbf24;
+}
+
+[data-theme="dark"] .status-badge.completed{
+    background:rgba(22,163,74,.15);
+    color:#4ade80;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width:768px){
+
+    .progress-bar{
+        width:90px;
+    }
+
+    .student-email{
+        display:block;
+        max-width:180px;
+        overflow:hidden;
+        white-space:nowrap;
+        text-overflow:ellipsis;
+    }
+
+}
+
+@media (min-width:769px) and (max-width:1024px){
+
+    .progress-bar{
+        width:120px;
+    }
+
+}

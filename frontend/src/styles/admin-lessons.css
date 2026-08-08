@@ -1,0 +1,135 @@
+/* ==========================================
+   ADMIN LESSONS
+========================================== */
+
+/* ---------- Header ---------- */
+
+.admin-lessons .page-header{
+    margin-bottom:30px;
+}
+
+/* ---------- Form ---------- */
+
+.lesson-form{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.lesson-form textarea{
+    grid-column:1/-1;
+    min-height:120px;
+}
+
+.lesson-form .form-error{
+    grid-column:1/-1;
+}
+
+.lesson-form .primary-btn{
+    grid-column:1/-1;
+}
+
+/* ---------- Table ---------- */
+
+.admin-lessons .subjects-table td{
+    vertical-align:middle;
+}
+
+/* ---------- Subject ---------- */
+
+.lesson-subject{
+    font-weight:600;
+    color:var(--primary);
+}
+
+/* ---------- Chapter ---------- */
+
+.lesson-chapter{
+    font-weight:600;
+    color:var(--text);
+}
+
+/* ---------- Lesson ---------- */
+
+.lesson-title{
+    font-weight:700;
+    color:var(--text);
+}
+
+/* ---------- Duration ---------- */
+
+.lesson-duration{
+
+    display:inline-block;
+
+    padding:8px 14px;
+
+    border-radius:999px;
+
+    background:#dbeafe;
+
+    color:#1d4ed8;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+/* ---------- XP ---------- */
+
+.lesson-xp{
+
+    display:inline-block;
+
+    padding:8px 14px;
+
+    border-radius:999px;
+
+    background:#fef3c7;
+
+    color:#b45309;
+
+    font-weight:700;
+
+}
+
+/* ---------- Dark Theme ---------- */
+
+[data-theme="dark"] .lesson-duration{
+
+    background:rgba(59,130,246,.15);
+
+    color:#60a5fa;
+
+}
+
+[data-theme="dark"] .lesson-xp{
+
+    background:rgba(245,158,11,.15);
+
+    color:#fbbf24;
+
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width:768px){
+
+    .lesson-form{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media (min-width:769px) and (max-width:1024px){
+
+    .lesson-form{
+
+        grid-template-columns:1fr;
+
+    }
+
+}

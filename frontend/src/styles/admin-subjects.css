@@ -1,0 +1,119 @@
+/* ==========================================
+   SUBJECT PAGE
+========================================== */
+
+.admin-subjects .page-header{
+    margin-bottom:30px;
+}
+
+.subject-form-header{
+    margin-bottom:20px;
+}
+
+.subject-form-header h2{
+    font-size:24px;
+    font-weight:700;
+    color:var(--text);
+}
+
+.subject-form-header p{
+    color:var(--text-light);
+    margin-top:6px;
+}
+
+.subject-card{
+    margin-bottom:30px;
+}
+
+.subject-form{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.subject-form textarea{
+    grid-column:1/-1;
+}
+
+.subject-form button{
+    grid-column:1/-1;
+}
+
+.refresh-btn{
+    background:var(--primary);
+    color:#fff;
+    padding:12px 22px;
+    border-radius:12px;
+    font-weight:600;
+}
+
+.refresh-btn:hover{
+    background:var(--primary-dark);
+}
+/* ==========================================
+   SUBJECT TABLE
+========================================== */
+
+.subject-icon{
+    font-size:28px;
+    text-align:center;
+}
+
+.subject-name{
+    font-weight:600;
+}
+
+.subject-description{
+    max-width:350px;
+    color:var(--text-light);
+}
+
+.action-buttons{
+    display:flex;
+    gap:10px;
+    justify-content:center;
+}
+
+.edit-btn{
+    min-width:90px;
+}
+
+.delete-btn{
+    min-width:90px;
+}
+
+.empty-state{
+    font-size:17px;
+    padding:50px;
+}
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:768px){
+
+.subject-form{
+    grid-template-columns:1fr;
+}
+
+.refresh-btn{
+    width:100%;
+}
+
+.subject-description{
+    max-width:200px;
+}
+
+.action-buttons{
+    flex-direction:column;
+}
+
+}
+
+@media(min-width:769px) and (max-width:1024px){
+
+.subject-form{
+    grid-template-columns:1fr;
+}
+
+}

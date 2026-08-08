@@ -1,0 +1,234 @@
+/* ==========================================
+   CLASS SELECTOR
+========================================== */
+
+.class-section{
+    padding:80px 0;
+    background:#f8fbff;
+    transition:.3s;
+}
+
+body.dark .class-section{
+    background:#111827;
+}
+
+.class-grid{
+    width:min(92%,1400px);
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:28px;
+}
+
+.class-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:30px;
+
+    border-radius:24px;
+
+    background:white;
+
+    border:1px solid #e5e7eb;
+
+    transition:.35s;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.05);
+
+}
+
+body.dark .class-card{
+
+background:#1e293b;
+
+border-color:#334155;
+
+}
+
+.class-card::before{
+
+content:"";
+
+position:absolute;
+
+left:0;
+top:0;
+
+width:100%;
+height:5px;
+
+background:linear-gradient(
+90deg,
+#2563eb,
+#4f46e5,
+#06b6d4
+);
+
+}
+
+.class-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 22px 45px rgba(37,99,235,.18);
+
+}
+
+.class-number{
+
+width:70px;
+height:70px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:30px;
+
+border-radius:20px;
+
+background:#eff6ff;
+
+margin-bottom:20px;
+
+}
+
+body.dark .class-number{
+
+background:#334155;
+
+}
+
+.class-card h3{
+
+font-size:28px;
+
+font-weight:700;
+
+margin-bottom:15px;
+
+color:#111827;
+
+}
+
+body.dark .class-card h3{
+
+color:white;
+
+}
+
+.class-card p{
+
+color:#64748b;
+
+margin-bottom:10px;
+
+line-height:1.7;
+
+}
+
+body.dark .class-card p{
+
+color:#cbd5e1;
+
+}
+
+.class-card button{
+
+margin-top:20px;
+
+width:100%;
+
+padding:14px;
+
+border:none;
+
+border-radius:14px;
+
+cursor:pointer;
+
+font-weight:700;
+
+color:white;
+
+background:linear-gradient(
+135deg,
+#2563eb,
+#4f46e5
+);
+
+transition:.3s;
+
+}
+
+.class-card button:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 15px 35px rgba(37,99,235,.30);
+
+}
+
+/* ==========================
+   Tablet
+========================== */
+
+@media(max-width:1100px){
+
+.class-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+/* ==========================
+   Mobile
+========================== */
+
+@media(max-width:768px){
+
+.class-section{
+
+padding:80px 0;
+
+}
+
+.class-grid{
+
+display:flex;
+
+overflow-x:auto;
+
+gap:18px;
+
+padding:10px 20px;
+
+scroll-snap-type:x mandatory;
+
+}
+
+.class-grid::-webkit-scrollbar{
+
+display:none;
+
+}
+
+.class-card{
+
+min-width:280px;
+
+flex-shrink:0;
+
+scroll-snap-align:start;
+
+}
+
+}

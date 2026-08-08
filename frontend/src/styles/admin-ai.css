@@ -1,0 +1,153 @@
+/* ==========================================
+   ADMIN AI TUTOR
+========================================== */
+
+/* ---------- Header ---------- */
+
+.admin-ai .page-header{
+    margin-bottom:30px;
+}
+
+/* ---------- Form ---------- */
+
+.ai-form{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.ai-form textarea{
+    grid-column:1/-1;
+    min-height:130px;
+    resize:vertical;
+}
+
+.ai-form .form-error{
+    grid-column:1/-1;
+}
+
+.ai-form .primary-btn{
+    grid-column:1/-1;
+}
+
+/* ---------- Table ---------- */
+
+.admin-ai .subjects-table td{
+    vertical-align:middle;
+}
+
+/* ---------- Text ---------- */
+
+.ai-subject{
+    font-weight:600;
+    color:var(--primary);
+}
+
+.ai-chapter{
+    font-weight:600;
+}
+
+.ai-lesson{
+    font-weight:600;
+}
+
+.ai-title{
+    font-weight:700;
+    color:var(--text);
+    margin-bottom:6px;
+}
+
+.ai-prompt{
+    display:block;
+    color:var(--text-light);
+    line-height:1.5;
+
+    max-width:420px;
+
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+
+/* ---------- Difficulty ---------- */
+
+.difficulty-badge{
+
+    display:inline-block;
+
+    padding:8px 14px;
+
+    border-radius:999px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+.difficulty-badge.easy{
+    background:#dcfce7;
+    color:#15803d;
+}
+
+.difficulty-badge.medium{
+    background:#fef3c7;
+    color:#b45309;
+}
+
+.difficulty-badge.hard{
+    background:#fee2e2;
+    color:#dc2626;
+}
+
+/* ---------- Dark Theme ---------- */
+
+[data-theme="dark"] .difficulty-badge.easy{
+    background:rgba(22,163,74,.15);
+    color:#4ade80;
+}
+
+[data-theme="dark"] .difficulty-badge.medium{
+    background:rgba(245,158,11,.15);
+    color:#fbbf24;
+}
+
+[data-theme="dark"] .difficulty-badge.hard{
+    background:rgba(239,68,68,.15);
+    color:#f87171;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width:768px){
+
+    .ai-form{
+        grid-template-columns:1fr;
+    }
+
+    .ai-prompt{
+        max-width:220px;
+    }
+
+}
+
+@media (min-width:769px) and (max-width:1024px){
+
+    .ai-form{
+        grid-template-columns:1fr;
+    }
+
+}
+.ai-title{
+    display:block;
+    font-size:16px;
+    font-weight:700;
+    color:#fff;
+    margin-bottom:6px;
+}
+
+.ai-prompt{
+    display:block;
+    color:#94a3b8;
+    font-size:13px;
+}

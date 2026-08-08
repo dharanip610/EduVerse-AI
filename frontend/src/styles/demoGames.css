@@ -1,0 +1,254 @@
+/* ==========================================
+   DEMO GAMES
+========================================== */
+
+.games-section{
+    padding:80px 0;
+    background:#ffffff;
+    transition:.3s;
+}
+
+body.dark .games-section{
+    background:#0f172a;
+}
+
+.games-slider{
+
+    width:min(92%,1400px);
+    margin:auto;
+
+    display:flex;
+    gap:28px;
+
+    overflow-x:auto;
+
+    padding:15px 5px 20px;
+
+    scroll-behavior:smooth;
+
+}
+
+.games-slider::-webkit-scrollbar{
+
+height:8px;
+
+}
+
+.games-slider::-webkit-scrollbar-thumb{
+
+background:#2563eb;
+border-radius:20px;
+
+}
+
+.game-card{
+
+    min-width:320px;
+
+    background:white;
+
+    border-radius:24px;
+
+    padding:30px;
+
+    border:1px solid #e5e7eb;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.06);
+
+    transition:.35s;
+
+    flex-shrink:0;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+body.dark .game-card{
+
+background:#1e293b;
+
+border-color:#334155;
+
+}
+
+.game-card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:5px;
+
+background:linear-gradient(
+90deg,
+#2563eb,
+#4f46e5,
+#06b6d4
+);
+
+}
+
+.game-card:hover{
+
+transform:translateY(-10px) scale(1.02);
+
+box-shadow:0 25px 50px rgba(37,99,235,.18);
+
+}
+
+.game-icon{
+
+width:80px;
+height:80px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:40px;
+
+background:#eff6ff;
+
+border-radius:20px;
+
+margin-bottom:25px;
+
+}
+
+body.dark .game-icon{
+
+background:#334155;
+
+}
+
+.game-card h3{
+
+font-size:26px;
+
+font-weight:700;
+
+margin-bottom:15px;
+
+color:#111827;
+
+}
+
+body.dark .game-card h3{
+
+color:white;
+
+}
+
+.game-card p{
+
+line-height:1.8;
+
+color:#64748b;
+
+margin-bottom:25px;
+
+}
+
+body.dark .game-card p{
+
+color:#cbd5e1;
+
+}
+
+.game-card button{
+
+width:100%;
+
+padding:14px;
+
+border:none;
+
+border-radius:14px;
+
+cursor:pointer;
+
+font-weight:700;
+
+color:white;
+
+background:linear-gradient(
+135deg,
+#2563eb,
+#4f46e5
+);
+
+transition:.3s;
+
+}
+
+.game-card button:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 15px 35px rgba(37,99,235,.30);
+
+}
+
+/* ==========================
+   Tablet
+========================== */
+
+@media(max-width:992px){
+
+.game-card{
+
+min-width:290px;
+
+}
+
+}
+
+/* ==========================
+   Mobile
+========================== */
+
+@media(max-width:768px){
+
+.games-section{
+
+padding:80px 0;
+
+}
+
+.games-slider{
+
+gap:20px;
+
+padding-left:20px;
+
+}
+
+.game-card{
+
+min-width:260px;
+
+padding:25px;
+
+}
+
+.game-card h3{
+
+font-size:22px;
+
+}
+
+.game-icon{
+
+width:70px;
+height:70px;
+font-size:34px;
+
+}
+
+}

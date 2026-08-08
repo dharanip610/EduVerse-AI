@@ -1,0 +1,171 @@
+/* ==========================================
+   ADMIN QUIZ
+========================================== */
+
+/* ---------- Header ---------- */
+
+.admin-quiz .page-header{
+    margin-bottom:30px;
+}
+
+/* ---------- Form ---------- */
+
+.quiz-form{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.quiz-form textarea{
+    grid-column:1/-1;
+    min-height:120px;
+    resize:vertical;
+}
+
+.quiz-form .form-error{
+    grid-column:1/-1;
+}
+
+.quiz-form .primary-btn{
+    grid-column:1/-1;
+}
+
+/* ---------- Table ---------- */
+
+.admin-quiz .subjects-table td{
+    vertical-align:middle;
+}
+
+.quiz-subject{
+    font-weight:600;
+    color:var(--primary);
+}
+
+.quiz-chapter{
+    font-weight:600;
+}
+
+.quiz-lesson{
+    font-weight:600;
+}
+
+.quiz-question{
+    max-width:420px;
+    font-weight:500;
+    line-height:1.5;
+}
+
+/* ---------- Correct Answer ---------- */
+
+.answer-badge{
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    min-width:40px;
+
+    padding:8px 12px;
+
+    border-radius:999px;
+
+    background:#dbeafe;
+
+    color:#2563eb;
+
+    font-weight:700;
+
+}
+
+/* ---------- Difficulty ---------- */
+
+.difficulty-badge{
+
+    display:inline-block;
+
+    padding:8px 14px;
+
+    border-radius:999px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+.difficulty-badge.easy{
+
+    background:#dcfce7;
+    color:#15803d;
+
+}
+
+.difficulty-badge.medium{
+
+    background:#fef3c7;
+    color:#b45309;
+
+}
+
+.difficulty-badge.hard{
+
+    background:#fee2e2;
+    color:#dc2626;
+
+}
+
+/* ---------- Dark ---------- */
+
+[data-theme="dark"] .answer-badge{
+
+    background:rgba(37,99,235,.15);
+
+    color:#60a5fa;
+
+}
+
+[data-theme="dark"] .difficulty-badge.easy{
+
+    background:rgba(22,163,74,.15);
+
+    color:#4ade80;
+
+}
+
+[data-theme="dark"] .difficulty-badge.medium{
+
+    background:rgba(245,158,11,.15);
+
+    color:#fbbf24;
+
+}
+
+[data-theme="dark"] .difficulty-badge.hard{
+
+    background:rgba(239,68,68,.15);
+
+    color:#f87171;
+
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width:768px){
+
+    .quiz-form{
+        grid-template-columns:1fr;
+    }
+
+    .quiz-question{
+        max-width:220px;
+    }
+
+}
+
+@media (min-width:769px) and (max-width:1024px){
+
+    .quiz-form{
+        grid-template-columns:1fr;
+    }
+
+}

@@ -1,0 +1,1095 @@
+/* ==========================================
+   GAMES PAGE - PART 1
+   Layout + Header
+========================================== */
+
+.games-page{
+
+    min-height:100vh;
+
+    padding:40px;
+
+    background:#f5f9ff;
+
+    transition:.35s ease;
+
+}
+
+/* ===========================
+   Header
+=========================== */
+
+.games-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+    padding:35px;
+
+    border-radius:28px;
+
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #4f46e5
+    );
+
+    color:#fff;
+
+    box-shadow:0 20px 45px rgba(37,99,235,.20);
+
+}
+
+.games-header h1{
+
+    font-size:42px;
+
+    margin-bottom:10px;
+
+    font-weight:700;
+
+}
+
+.games-header p{
+
+    max-width:650px;
+
+    line-height:1.8;
+
+    opacity:.95;
+
+}
+
+/* ===========================
+   Grid
+=========================== */
+
+.games-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(320px,1fr));
+
+    gap:28px;
+
+}
+
+/* ===========================
+   Dark Theme
+=========================== */
+
+body.dark .games-page{
+
+    background:#020617;
+
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media(max-width:992px){
+
+.games-header{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:20px;
+
+}
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media(max-width:768px){
+
+.games-page{
+
+padding:20px;
+
+}
+
+.games-header{
+
+padding:24px;
+
+border-radius:22px;
+
+}
+
+.games-header h1{
+
+font-size:30px;
+
+}
+
+.games-header p{
+
+font-size:14px;
+
+}
+
+}
+
+/* ===========================
+   Small Mobile
+=========================== */
+
+@media(max-width:480px){
+
+.games-header h1{
+
+font-size:24px;
+
+}
+
+}
+/* ==========================================
+   GAMES PAGE - PART 2
+   Game Cards
+========================================== */
+
+/* ===========================
+   Game Card
+=========================== */
+
+.game-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:32px 26px;
+
+    border-radius:26px;
+
+    background:#ffffff;
+
+    border:1px solid rgba(37,99,235,.08);
+
+    box-shadow:0 14px 35px rgba(15,23,42,.08);
+
+    transition:all .35s ease;
+
+}
+
+.game-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 25px 50px rgba(37,99,235,.18);
+
+}
+
+.game-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:5px;
+
+    background:linear-gradient(
+        90deg,
+        #2563eb,
+        #4f46e5
+    );
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    transition:.35s;
+
+}
+
+.game-card:hover::before{
+
+    transform:scaleX(1);
+
+}
+
+/* ===========================
+   Icon
+=========================== */
+
+.game-icon{
+
+    width:90px;
+
+    height:90px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    font-size:42px;
+
+    margin-bottom:22px;
+
+    background:linear-gradient(
+        135deg,
+        #eff6ff,
+        #dbeafe
+    );
+
+    transition:.35s;
+
+}
+
+.game-card:hover .game-icon{
+
+    transform:scale(1.1) rotate(8deg);
+
+}
+
+/* ===========================
+   Title
+=========================== */
+
+.game-card h2{
+
+    font-size:24px;
+
+    color:#0f172a;
+
+    margin-bottom:12px;
+
+}
+
+.game-card p{
+
+    color:#64748b;
+
+    line-height:1.8;
+
+    margin-bottom:20px;
+
+    flex:1;
+
+}
+
+/* ===========================
+   XP Badge
+=========================== */
+
+.game-card span{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    background:#dcfce7;
+
+    color:#15803d;
+
+    font-weight:700;
+
+    margin-bottom:22px;
+
+}
+
+/* ===========================
+   Play Button
+=========================== */
+
+.game-card button{
+
+    width:100%;
+
+    border:none;
+
+    padding:14px;
+
+    border-radius:16px;
+
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #4f46e5
+    );
+
+    color:#ffffff;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.30s;
+
+    box-shadow:0 12px 30px rgba(37,99,235,.20);
+
+}
+
+.game-card button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 18px 38px rgba(37,99,235,.32);
+
+}
+
+/* ===========================
+   Dark Theme
+=========================== */
+
+body.dark .game-card{
+
+    background:#1e293b;
+
+    border:1px solid #334155;
+
+}
+
+body.dark .game-card h2{
+
+    color:#f8fafc;
+
+}
+
+body.dark .game-card p{
+
+    color:#cbd5e1;
+
+}
+
+body.dark .game-icon{
+
+    background:linear-gradient(
+        135deg,
+        #1e3a8a,
+        #312e81
+    );
+
+}
+
+body.dark .game-card span{
+
+    background:#166534;
+
+    color:#dcfce7;
+
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media(max-width:992px){
+
+.game-card{
+
+padding:28px 22px;
+
+}
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media(max-width:768px){
+
+.game-icon{
+
+width:74px;
+
+height:74px;
+
+font-size:34px;
+
+}
+
+.game-card{
+
+padding:24px 20px;
+
+}
+
+.game-card h2{
+
+font-size:21px;
+
+}
+
+.game-card p{
+
+font-size:14px;
+
+}
+
+.game-card button{
+
+padding:12px;
+
+}
+
+}
+/* ==========================================
+   GAMES PAGE - PART 3
+   Game Modal
+========================================== */
+
+/* ===========================
+   Overlay
+=========================== */
+
+.game-modal-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+
+    background:rgba(15,23,42,.65);
+
+    backdrop-filter:blur(8px);
+
+    z-index:999;
+
+    animation:overlayFade .3s ease;
+
+}
+
+@keyframes overlayFade{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+/* ===========================
+   Modal
+=========================== */
+
+.game-modal{
+
+    width:100%;
+
+    max-width:520px;
+
+    background:#ffffff;
+
+    border-radius:28px;
+
+    padding:36px;
+
+    text-align:center;
+
+    border:1px solid rgba(37,99,235,.08);
+
+    box-shadow:0 30px 70px rgba(15,23,42,.20);
+
+    animation:modalPop .35s ease;
+
+}
+
+@keyframes modalPop{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px) scale(.96);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0) scale(1);
+
+    }
+
+}
+
+/* ===========================
+   Heading
+=========================== */
+
+.game-modal h2{
+
+    font-size:32px;
+
+    color:#0f172a;
+
+    margin-bottom:16px;
+
+}
+
+.game-modal p{
+
+    color:#64748b;
+
+    line-height:1.8;
+
+    margin-bottom:20px;
+
+}
+
+.game-modal h3{
+
+    display:inline-block;
+
+    margin-bottom:28px;
+
+    padding:10px 20px;
+
+    border-radius:999px;
+
+    background:#dcfce7;
+
+    color:#15803d;
+
+    font-size:18px;
+
+    font-weight:700;
+
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+.play-game-btn,
+
+.close-modal-btn{
+
+    width:100%;
+
+    border:none;
+
+    padding:15px;
+
+    border-radius:16px;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.play-game-btn{
+
+    margin-bottom:14px;
+
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #4f46e5
+    );
+
+    color:#fff;
+
+    box-shadow:0 14px 32px rgba(37,99,235,.25);
+
+}
+
+.play-game-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 20px 40px rgba(37,99,235,.35);
+
+}
+
+.close-modal-btn{
+
+    background:#f1f5f9;
+
+    color:#334155;
+
+}
+
+.close-modal-btn:hover{
+
+    background:#e2e8f0;
+
+}
+
+/* ===========================
+   Dark Theme
+=========================== */
+
+body.dark .game-modal{
+
+    background:#1e293b;
+
+    border:1px solid #334155;
+
+}
+
+body.dark .game-modal h2{
+
+    color:#f8fafc;
+
+}
+
+body.dark .game-modal p{
+
+    color:#cbd5e1;
+
+}
+
+body.dark .game-modal h3{
+
+    background:#166534;
+
+    color:#dcfce7;
+
+}
+
+body.dark .close-modal-btn{
+
+    background:#334155;
+
+    color:#ffffff;
+
+}
+
+body.dark .close-modal-btn:hover{
+
+    background:#475569;
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media(max-width:768px){
+
+.game-modal{
+
+padding:26px 20px;
+
+border-radius:22px;
+
+}
+
+.game-modal h2{
+
+font-size:26px;
+
+}
+
+.game-modal p{
+
+font-size:14px;
+
+}
+
+.play-game-btn,
+
+.close-modal-btn{
+
+font-size:15px;
+
+padding:14px;
+
+}
+
+}
+/* ==========================================
+   GAMES PAGE - PART 4
+   Premium Finish
+========================================== */
+
+/* ===========================
+   Premium Glow Border
+=========================== */
+
+.game-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:26px;
+
+    padding:1px;
+
+    background:linear-gradient(
+        135deg,
+        rgba(37,99,235,.25),
+        rgba(79,70,229,.18),
+        rgba(6,182,212,.18)
+    );
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+
+    mask-composite:exclude;
+
+    opacity:0;
+
+    transition:.35s;
+
+    pointer-events:none;
+
+}
+
+.game-card:hover::after{
+
+    opacity:1;
+
+}
+
+/* ===========================
+   Floating Animation
+=========================== */
+
+.game-card{
+
+    animation:gameFloat 7s ease-in-out infinite;
+
+}
+
+.game-card:nth-child(2){
+
+    animation-delay:.3s;
+
+}
+
+.game-card:nth-child(3){
+
+    animation-delay:.6s;
+
+}
+
+.game-card:nth-child(4){
+
+    animation-delay:.9s;
+
+}
+
+.game-card:nth-child(5){
+
+    animation-delay:1.2s;
+
+}
+
+.game-card:nth-child(6){
+
+    animation-delay:1.5s;
+
+}
+
+@keyframes gameFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-6px);
+
+    }
+
+}
+
+/* ===========================
+   Hover Text
+=========================== */
+
+.game-card:hover h2{
+
+    color:#2563eb;
+
+}
+
+.game-card:hover p{
+
+    color:#475569;
+
+}
+
+/* ===========================
+   Modal Glow
+=========================== */
+
+.game-modal{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.game-modal::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        135deg,
+        rgba(37,99,235,.06),
+        transparent,
+        rgba(79,70,229,.06)
+    );
+
+    pointer-events:none;
+
+}
+
+/* ===========================
+   Button Animation
+=========================== */
+
+.play-game-btn:active,
+
+.close-modal-btn:active,
+
+.game-card button:active{
+
+    transform:scale(.96);
+
+}
+
+/* ===========================
+   Dark Theme Polish
+=========================== */
+
+body.dark .game-card:hover{
+
+    box-shadow:0 22px 50px rgba(96,165,250,.18);
+
+}
+
+body.dark .game-card:hover h2{
+
+    color:#60a5fa;
+
+}
+
+body.dark .game-card:hover p{
+
+    color:#e2e8f0;
+
+}
+
+body.dark .game-modal{
+
+    box-shadow:0 30px 70px rgba(0,0,0,.45);
+
+}
+
+/* ===========================
+   Large Desktop
+=========================== */
+
+@media(min-width:1500px){
+
+.games-page{
+
+    max-width:1500px;
+
+    margin:auto;
+
+}
+
+.games-grid{
+
+    grid-template-columns:repeat(3,1fr);
+
+}
+
+}
+
+/* ===========================
+   Laptop
+=========================== */
+
+@media(max-width:1200px){
+
+.games-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media(max-width:992px){
+
+.games-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:22px;
+
+}
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media(max-width:768px){
+
+.games-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.game-card{
+
+    border-radius:22px;
+
+}
+
+.game-icon{
+
+    margin-bottom:18px;
+
+}
+
+}
+
+/* ===========================
+   Small Mobile
+=========================== */
+
+@media(max-width:480px){
+
+.games-header h1{
+
+    font-size:24px;
+
+}
+
+.game-card{
+
+    padding:20px 18px;
+
+}
+
+.game-card h2{
+
+    font-size:20px;
+
+}
+
+.game-card p{
+
+    font-size:14px;
+
+    line-height:1.6;
+
+}
+
+.game-card span{
+
+    font-size:13px;
+
+}
+
+}
+
+/* ===========================
+   Text Selection
+=========================== */
+
+::selection{
+
+    background:#2563eb;
+
+    color:#ffffff;
+
+}
+
+/* ===========================
+   Reduced Motion
+=========================== */
+
+@media (prefers-reduced-motion: reduce){
+
+*{
+
+    animation:none !important;
+
+    transition:none !important;
+
+    scroll-behavior:auto !important;
+
+}
+
+}

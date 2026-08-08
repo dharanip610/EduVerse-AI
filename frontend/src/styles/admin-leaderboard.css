@@ -1,0 +1,185 @@
+/* ==========================================
+   ADMIN LEADERBOARD
+========================================== */
+
+/* ---------- Header ---------- */
+
+.admin-leaderboard .page-header{
+    margin-bottom:30px;
+}
+
+/* ---------- Table ---------- */
+
+.admin-leaderboard .subjects-table td{
+    vertical-align:middle;
+}
+
+/* ---------- Student ---------- */
+
+.student-name{
+    font-weight:700;
+    color:var(--text);
+    margin-bottom:4px;
+}
+
+.student-email{
+    color:var(--text-light);
+    font-size:13px;
+}
+
+/* ---------- Rank ---------- */
+
+.rank-badge{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-width:60px;
+    padding:8px 14px;
+    border-radius:999px;
+    font-weight:700;
+    color:#fff;
+}
+
+.rank-1{
+    background:linear-gradient(135deg,#f59e0b,#fbbf24);
+}
+
+.rank-2{
+    background:linear-gradient(135deg,#9ca3af,#d1d5db);
+}
+
+.rank-3{
+    background:linear-gradient(135deg,#b45309,#d97706);
+}
+
+[class*="rank-"]:not(.rank-1):not(.rank-2):not(.rank-3){
+    background:var(--primary);
+}
+
+/* ---------- XP ---------- */
+
+.xp-badge{
+    display:inline-block;
+    padding:8px 14px;
+    border-radius:999px;
+    background:#fef3c7;
+    color:#b45309;
+    font-weight:700;
+}
+
+/* ---------- Lessons ---------- */
+
+.lesson-count{
+    display:inline-block;
+    padding:8px 14px;
+    border-radius:999px;
+    background:#dbeafe;
+    color:#2563eb;
+    font-weight:600;
+}
+
+/* ---------- Streak ---------- */
+
+.streak-badge{
+    display:inline-block;
+    padding:8px 14px;
+    border-radius:999px;
+    background:#fee2e2;
+    color:#dc2626;
+    font-weight:700;
+}
+
+/* ---------- Achievement ---------- */
+
+.achievement-badge{
+    display:inline-block;
+    padding:8px 14px;
+    border-radius:999px;
+    font-size:13px;
+    font-weight:700;
+}
+
+.achievement-badge.champion{
+    background:#fef3c7;
+    color:#b45309;
+}
+
+.achievement-badge.top-performer{
+    background:#dcfce7;
+    color:#15803d;
+}
+
+.achievement-badge.rising-star{
+    background:#dbeafe;
+    color:#2563eb;
+}
+
+.achievement-badge.rookie{
+    background:#f3f4f6;
+    color:#4b5563;
+}
+
+/* ---------- Dark Theme ---------- */
+
+[data-theme="dark"] .xp-badge{
+    background:rgba(245,158,11,.15);
+    color:#fbbf24;
+}
+
+[data-theme="dark"] .lesson-count{
+    background:rgba(59,130,246,.15);
+    color:#60a5fa;
+}
+
+[data-theme="dark"] .streak-badge{
+    background:rgba(239,68,68,.15);
+    color:#f87171;
+}
+
+[data-theme="dark"] .achievement-badge.champion{
+    background:rgba(245,158,11,.15);
+    color:#fbbf24;
+}
+
+[data-theme="dark"] .achievement-badge.top-performer{
+    background:rgba(22,163,74,.15);
+    color:#4ade80;
+}
+
+[data-theme="dark"] .achievement-badge.rising-star{
+    background:rgba(59,130,246,.15);
+    color:#60a5fa;
+}
+
+[data-theme="dark"] .achievement-badge.rookie{
+    background:rgba(107,114,128,.15);
+    color:#d1d5db;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width:768px){
+
+    .student-email{
+        display:block;
+        max-width:180px;
+        overflow:hidden;
+        white-space:nowrap;
+        text-overflow:ellipsis;
+    }
+
+    .rank-badge{
+        min-width:48px;
+        padding:6px 10px;
+        font-size:12px;
+    }
+
+}
+
+@media (min-width:769px) and (max-width:1024px){
+
+    .rank-badge{
+        min-width:54px;
+    }
+
+}

@@ -1,0 +1,170 @@
+/* ==========================================
+   ADMIN GAMES
+========================================== */
+
+/* ---------- Header ---------- */
+
+.admin-games .page-header{
+    margin-bottom:30px;
+}
+
+/* ---------- Form ---------- */
+
+.game-form{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.game-form textarea{
+    grid-column:1/-1;
+    min-height:120px;
+    resize:vertical;
+}
+
+.game-form .form-error{
+    grid-column:1/-1;
+}
+
+.game-form .primary-btn{
+    grid-column:1/-1;
+}
+
+/* ---------- Table ---------- */
+
+.admin-games .subjects-table td{
+    vertical-align:middle;
+}
+
+/* ---------- Thumbnail ---------- */
+
+.game-thumb{
+    width:60px;
+    height:60px;
+    border-radius:12px;
+    object-fit:cover;
+    border:1px solid var(--border);
+}
+
+.game-thumb.placeholder{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--surface);
+    font-size:24px;
+}
+
+/* ---------- Text ---------- */
+
+.game-subject{
+    font-weight:600;
+    color:var(--primary);
+}
+
+.game-title{
+    font-weight:700;
+    color:var(--text);
+    margin-bottom:4px;
+}
+
+.game-description{
+    display:block;
+    color:var(--text-light);
+    line-height:1.4;
+}
+
+/* ---------- Badges ---------- */
+
+.game-type{
+    display:inline-block;
+    padding:8px 14px;
+    border-radius:999px;
+    background:#e0f2fe;
+    color:#0369a1;
+    font-weight:600;
+    font-size:13px;
+}
+
+.game-xp{
+    display:inline-block;
+    padding:8px 14px;
+    border-radius:999px;
+    background:#fef3c7;
+    color:#b45309;
+    font-weight:700;
+}
+
+/* ---------- Difficulty ---------- */
+
+.difficulty-badge{
+    display:inline-block;
+    padding:8px 14px;
+    border-radius:999px;
+    font-size:13px;
+    font-weight:700;
+}
+
+.difficulty-badge.easy{
+    background:#dcfce7;
+    color:#15803d;
+}
+
+.difficulty-badge.medium{
+    background:#fef3c7;
+    color:#b45309;
+}
+
+.difficulty-badge.hard{
+    background:#fee2e2;
+    color:#dc2626;
+}
+
+/* ---------- Dark Theme ---------- */
+
+[data-theme="dark"] .game-type{
+    background:rgba(14,165,233,.15);
+    color:#38bdf8;
+}
+
+[data-theme="dark"] .game-xp{
+    background:rgba(245,158,11,.15);
+    color:#fbbf24;
+}
+
+[data-theme="dark"] .difficulty-badge.easy{
+    background:rgba(22,163,74,.15);
+    color:#4ade80;
+}
+
+[data-theme="dark"] .difficulty-badge.medium{
+    background:rgba(245,158,11,.15);
+    color:#fbbf24;
+}
+
+[data-theme="dark"] .difficulty-badge.hard{
+    background:rgba(239,68,68,.15);
+    color:#f87171;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width:768px){
+
+    .game-form{
+        grid-template-columns:1fr;
+    }
+
+    .game-thumb{
+        width:48px;
+        height:48px;
+    }
+
+}
+
+@media (min-width:769px) and (max-width:1024px){
+
+    .game-form{
+        grid-template-columns:1fr;
+    }
+
+}

@@ -1,0 +1,1544 @@
+/* ==========================================
+   PROFILE PAGE - PART 1
+   Hero + Avatar + Level Card
+========================================== */
+
+/* ===========================
+   Profile Page
+=========================== */
+
+.profilePage{
+
+    min-height:100vh;
+
+    padding:40px;
+
+    background:#f5f9ff;
+
+}
+
+/* ===========================
+   Hero Section
+=========================== */
+
+.profileHero{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:30px;
+
+    padding:35px;
+
+    border-radius:30px;
+
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #4f46e5
+    );
+
+    color:#ffffff;
+
+    box-shadow:0 22px 50px rgba(37,99,235,.20);
+
+    margin-bottom:35px;
+
+}
+
+/* ===========================
+   Hero Left
+=========================== */
+
+.heroLeft{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+}
+
+/* ===========================
+   Avatar
+=========================== */
+
+.avatarBox{
+
+    position:relative;
+
+    width:130px;
+
+    height:130px;
+
+}
+
+.avatarImage,
+
+.avatarCircle{
+
+    width:130px;
+
+    height:130px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:46px;
+
+    font-weight:700;
+
+    background:#ffffff;
+
+    color:#2563eb;
+
+    border:5px solid rgba(255,255,255,.35);
+
+    box-shadow:0 16px 35px rgba(0,0,0,.15);
+
+}
+
+/* ===========================
+   Camera Button
+=========================== */
+
+.cameraBtn{
+
+    position:absolute;
+
+    bottom:6px;
+
+    right:6px;
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#ffffff;
+
+    color:#2563eb;
+
+    cursor:pointer;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.18);
+
+    transition:.3s;
+
+}
+
+.cameraBtn:hover{
+
+    transform:scale(1.1);
+
+    background:#2563eb;
+
+    color:#ffffff;
+
+}
+
+/* ===========================
+   Hero Info
+=========================== */
+
+.heroInfo{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.heroInfo h1{
+
+    font-size:34px;
+
+    font-weight:700;
+
+}
+
+.heroInfo p{
+
+    opacity:.95;
+
+    font-size:16px;
+
+}
+
+/* ===========================
+   Badge Row
+=========================== */
+
+.badgeRow{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    margin-top:10px;
+
+}
+
+.badgeRow span{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:10px 16px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(12px);
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+/* ===========================
+   Remove Avatar Button
+=========================== */
+
+.removeAvatarBtn{
+
+    margin-top:14px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    border:none;
+
+    padding:12px 18px;
+
+    border-radius:14px;
+
+    background:#ef4444;
+
+    color:#ffffff;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.removeAvatarBtn:hover{
+
+    background:#dc2626;
+
+    transform:translateY(-2px);
+
+}
+
+/* ===========================
+   Hero Right
+=========================== */
+
+.heroRight{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+/* ===========================
+   Level Card
+=========================== */
+
+.levelCard{
+
+    width:180px;
+
+    height:180px;
+
+    border-radius:28px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(16px);
+
+    border:1px solid rgba(255,255,255,.25);
+
+}
+
+.levelCard h2{
+
+    font-size:58px;
+
+    font-weight:700;
+
+    line-height:1;
+
+}
+
+.levelCard span{
+
+    margin-top:10px;
+
+    font-size:15px;
+
+    letter-spacing:2px;
+
+    opacity:.9;
+
+}
+
+/* ===========================
+   Dark Theme
+=========================== */
+
+body.dark .profilePage{
+
+    background:#020617;
+
+}
+
+body.dark .avatarCircle{
+
+    background:#1e293b;
+
+    color:#60a5fa;
+
+}
+
+body.dark .cameraBtn{
+
+    background:#1e293b;
+
+    color:#60a5fa;
+
+}
+
+body.dark .cameraBtn:hover{
+
+    background:#2563eb;
+
+    color:#ffffff;
+
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media(max-width:992px){
+
+.profileHero{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+}
+
+.heroRight{
+
+    width:100%;
+
+    justify-content:flex-start;
+
+}
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media(max-width:768px){
+
+.profilePage{
+
+    padding:20px;
+
+}
+
+.profileHero{
+
+    padding:24px;
+
+    border-radius:24px;
+
+}
+
+.heroLeft{
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+.avatarBox{
+
+    width:110px;
+
+    height:110px;
+
+}
+
+.avatarImage,
+
+.avatarCircle{
+
+    width:110px;
+
+    height:110px;
+
+    font-size:38px;
+
+}
+
+.heroInfo h1{
+
+    font-size:28px;
+
+}
+
+.levelCard{
+
+    width:150px;
+
+    height:150px;
+
+}
+
+.levelCard h2{
+
+    font-size:48px;
+
+}
+
+.badgeRow{
+
+    justify-content:center;
+
+}
+
+}
+/* ==========================================
+   PROFILE PAGE - PART 2
+   Stats + Achievements
+========================================== */
+
+/* ===========================
+   Profile Stats
+=========================== */
+
+.profileStats{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+    gap:24px;
+
+    margin-bottom:35px;
+
+}
+
+/* ===========================
+   Stat Box
+=========================== */
+
+.statBox{
+
+    background:#ffffff;
+
+    border-radius:24px;
+
+    padding:28px;
+
+    text-align:center;
+
+    border:1px solid rgba(37,99,235,.08);
+
+    box-shadow:0 15px 35px rgba(15,23,42,.08);
+
+    transition:.35s;
+
+}
+
+.statBox:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 25px 50px rgba(37,99,235,.15);
+
+}
+
+.statBox svg{
+
+    font-size:42px;
+
+    color:#2563eb;
+
+    margin-bottom:18px;
+
+}
+
+.statBox h2{
+
+    font-size:34px;
+
+    color:#0f172a;
+
+    margin-bottom:8px;
+
+}
+
+.statBox span{
+
+    color:#64748b;
+
+    font-weight:500;
+
+}
+
+/* ===========================
+   Achievement Progress
+=========================== */
+
+.achievementProgress{
+
+    grid-column:1/-1;
+
+    background:#ffffff;
+
+    padding:28px;
+
+    border-radius:24px;
+
+    border:1px solid rgba(37,99,235,.08);
+
+    box-shadow:0 15px 35px rgba(15,23,42,.08);
+
+}
+
+.achievementProgressHeader{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:18px;
+
+    font-weight:600;
+
+    color:#334155;
+
+}
+
+.achievementProgressBar{
+
+    width:100%;
+
+    height:14px;
+
+    background:#e2e8f0;
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+}
+
+.achievementProgressFill{
+
+    height:100%;
+
+    width:0;
+
+    border-radius:999px;
+
+    background:linear-gradient(
+        90deg,
+        #2563eb,
+        #4f46e5
+    );
+
+    transition:width .8s ease;
+
+}
+
+/* ===========================
+   Achievement Section
+=========================== */
+
+.achievementSection{
+
+    grid-column:1/-1;
+
+    background:#ffffff;
+
+    padding:30px;
+
+    border-radius:24px;
+
+    border:1px solid rgba(37,99,235,.08);
+
+    box-shadow:0 15px 35px rgba(15,23,42,.08);
+
+}
+
+.achievementSection h2{
+
+    font-size:28px;
+
+    color:#0f172a;
+
+    margin-bottom:24px;
+
+}
+
+/* ===========================
+   Achievement Grid
+=========================== */
+
+.achievementGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+    gap:20px;
+
+}
+
+/* ===========================
+   Achievement Card
+=========================== */
+
+.achievementCard{
+
+    text-align:center;
+
+    padding:24px;
+
+    border-radius:20px;
+
+    border:1px solid #e2e8f0;
+
+    transition:.35s;
+
+}
+
+.achievementCard:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.achievementIcon{
+
+    font-size:44px;
+
+    margin-bottom:16px;
+
+}
+
+.achievementCard h3{
+
+    color:#0f172a;
+
+    margin-bottom:10px;
+
+    font-size:18px;
+
+}
+
+.achievementCard p{
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+/* ===========================
+   Unlocked
+=========================== */
+
+.achievementCard.unlocked{
+
+    background:#eff6ff;
+
+    border-color:#2563eb;
+
+}
+
+.achievementCard.unlocked p{
+
+    color:#15803d;
+
+}
+
+/* ===========================
+   Locked
+=========================== */
+
+.achievementCard.locked{
+
+    background:#f8fafc;
+
+    opacity:.7;
+
+}
+
+.achievementCard.locked .achievementIcon{
+
+    filter:grayscale(100%);
+
+}
+
+.achievementCard.locked p{
+
+    color:#94a3b8;
+
+}
+
+/* ===========================
+   Dark Theme
+=========================== */
+
+body.dark .statBox,
+
+body.dark .achievementProgress,
+
+body.dark .achievementSection{
+
+    background:#1e293b;
+
+    border:1px solid #334155;
+
+}
+
+body.dark .statBox h2,
+
+body.dark .achievementSection h2,
+
+body.dark .achievementCard h3{
+
+    color:#f8fafc;
+
+}
+
+body.dark .statBox span,
+
+body.dark .achievementProgressHeader{
+
+    color:#cbd5e1;
+
+}
+
+body.dark .achievementProgressBar{
+
+    background:#334155;
+
+}
+
+body.dark .achievementCard{
+
+    border-color:#475569;
+
+}
+
+body.dark .achievementCard.unlocked{
+
+    background:#1e3a8a;
+
+}
+
+body.dark .achievementCard.locked{
+
+    background:#334155;
+
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media(max-width:992px){
+
+.profileStats{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media(max-width:768px){
+
+.profileStats{
+
+    grid-template-columns:1fr;
+
+}
+
+.statBox{
+
+    padding:22px;
+
+}
+
+.statBox h2{
+
+    font-size:28px;
+
+}
+
+.achievementProgress,
+
+.achievementSection{
+
+    padding:22px;
+
+}
+
+.achievementSection h2{
+
+    font-size:22px;
+
+}
+
+.achievementGrid{
+
+    grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+
+}
+
+}
+/* ==========================================
+   PROFILE PAGE - PART 3
+   Personal Information
+========================================== */
+
+/* ===========================
+   Profile Content
+=========================== */
+
+.profileContent{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:30px;
+
+}
+
+/* ===========================
+   Information Section
+=========================== */
+
+.infoSection{
+
+    background:#ffffff;
+
+    border-radius:28px;
+
+    padding:32px;
+
+    border:1px solid rgba(37,99,235,.08);
+
+    box-shadow:0 18px 40px rgba(15,23,42,.08);
+
+}
+
+.infoSection h2{
+
+    font-size:28px;
+
+    color:#0f172a;
+
+    margin-bottom:28px;
+
+}
+
+/* ===========================
+   Info Grid
+=========================== */
+
+.infoGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:24px;
+
+}
+
+/* ===========================
+   Info Card
+=========================== */
+
+.infoCard{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+    padding:22px;
+
+    border-radius:20px;
+
+    background:#f8fbff;
+
+    border:1px solid rgba(37,99,235,.08);
+
+    transition:.3s;
+
+}
+
+.infoCard:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 30px rgba(37,99,235,.10);
+
+}
+
+/* ===========================
+   Labels
+=========================== */
+
+.infoCard label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    color:#2563eb;
+
+}
+
+.infoCard label svg{
+
+    font-size:18px;
+
+}
+
+/* ===========================
+   Text
+=========================== */
+
+.infoCard p{
+
+    font-size:16px;
+
+    color:#334155;
+
+    font-weight:500;
+
+    word-break:break-word;
+
+}
+
+/* ===========================
+   Inputs
+=========================== */
+
+.infoCard input{
+
+    width:100%;
+
+    padding:14px 16px;
+
+    border-radius:14px;
+
+    border:1px solid #cbd5e1;
+
+    background:#ffffff;
+
+    font-size:15px;
+
+    color:#0f172a;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+.infoCard input:focus{
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.12);
+
+}
+
+.infoCard input::placeholder{
+
+    color:#94a3b8;
+
+}
+
+/* ===========================
+   Disabled Fields
+=========================== */
+
+.infoCard input:disabled{
+
+    background:#f1f5f9;
+
+    cursor:not-allowed;
+
+}
+
+/* ===========================
+   Dark Theme
+=========================== */
+
+body.dark .infoSection{
+
+    background:#1e293b;
+
+    border:1px solid #334155;
+
+}
+
+body.dark .infoSection h2{
+
+    color:#f8fafc;
+
+}
+
+body.dark .infoCard{
+
+    background:#334155;
+
+    border:1px solid #475569;
+
+}
+
+body.dark .infoCard p{
+
+    color:#e2e8f0;
+
+}
+
+body.dark .infoCard input{
+
+    background:#0f172a;
+
+    border:1px solid #475569;
+
+    color:#f8fafc;
+
+}
+
+body.dark .infoCard input::placeholder{
+
+    color:#94a3b8;
+
+}
+
+body.dark .infoCard input:focus{
+
+    border-color:#60a5fa;
+
+    box-shadow:0 0 0 4px rgba(96,165,250,.18);
+
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media(max-width:992px){
+
+.infoGrid{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media(max-width:768px){
+
+.infoSection{
+
+    padding:22px;
+
+    border-radius:22px;
+
+}
+
+.infoSection h2{
+
+    font-size:22px;
+
+}
+
+.infoCard{
+
+    padding:18px;
+
+}
+
+.infoCard label{
+
+    font-size:14px;
+
+}
+
+.infoCard p,
+
+.infoCard input{
+
+    font-size:14px;
+
+}
+
+}
+/* ==========================================
+   PROFILE PAGE - PART 4
+   Buttons + Summary + Finish
+========================================== */
+
+/* ===========================
+   Action Buttons
+=========================== */
+
+.profileButtons{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+    margin-top:10px;
+
+}
+
+.profileButtons button{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:15px 24px;
+
+    border:none;
+
+    border-radius:16px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+/* ===========================
+   Edit
+=========================== */
+
+.editButton{
+
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #4f46e5
+    );
+
+    color:#fff;
+
+    box-shadow:0 15px 35px rgba(37,99,235,.25);
+
+}
+
+.editButton:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 22px 45px rgba(37,99,235,.35);
+
+}
+
+/* ===========================
+   Save
+=========================== */
+
+.saveButton{
+
+    background:linear-gradient(
+        135deg,
+        #10b981,
+        #059669
+    );
+
+    color:#fff;
+
+}
+
+.saveButton:hover:not(:disabled){
+
+    transform:translateY(-3px);
+
+}
+
+.saveButton:disabled{
+
+    opacity:.7;
+
+    cursor:not-allowed;
+
+}
+
+/* ===========================
+   Cancel
+=========================== */
+
+.cancelButton{
+
+    background:#f1f5f9;
+
+    color:#334155;
+
+}
+
+.cancelButton:hover{
+
+    background:#e2e8f0;
+
+}
+
+/* ===========================
+   Logout
+=========================== */
+
+.logoutButton{
+
+    background:#ef4444;
+
+    color:#fff;
+
+    margin-left:auto;
+
+}
+
+.logoutButton:hover{
+
+    background:#dc2626;
+
+    transform:translateY(-3px);
+
+}
+
+/* ===========================
+   Summary
+=========================== */
+
+.summarySection{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:24px;
+
+}
+
+.summaryCard{
+
+    background:#ffffff;
+
+    padding:30px;
+
+    border-radius:24px;
+
+    border:1px solid rgba(37,99,235,.08);
+
+    box-shadow:0 18px 35px rgba(15,23,42,.08);
+
+    transition:.35s;
+
+}
+
+.summaryCard:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.summaryCard h3{
+
+    font-size:22px;
+
+    color:#0f172a;
+
+    margin-bottom:20px;
+
+}
+
+/* ===========================
+   Progress Bar
+=========================== */
+
+.progressBar{
+
+    width:100%;
+
+    height:14px;
+
+    border-radius:999px;
+
+    background:#e2e8f0;
+
+    overflow:hidden;
+
+    margin-bottom:16px;
+
+}
+
+.progressFill{
+
+    height:100%;
+
+    border-radius:999px;
+
+    background:linear-gradient(
+        90deg,
+        #2563eb,
+        #4f46e5
+    );
+
+    transition:width .8s ease;
+
+}
+
+.summaryCard span{
+
+    font-weight:600;
+
+    color:#2563eb;
+
+}
+
+.summaryCard p{
+
+    margin:12px 0;
+
+    color:#475569;
+
+    line-height:1.7;
+
+}
+
+/* ===========================
+   Dark Theme
+=========================== */
+
+body.dark .cancelButton{
+
+    background:#334155;
+
+    color:#f8fafc;
+
+}
+
+body.dark .cancelButton:hover{
+
+    background:#475569;
+
+}
+
+body.dark .summaryCard{
+
+    background:#1e293b;
+
+    border:1px solid #334155;
+
+}
+
+body.dark .summaryCard h3{
+
+    color:#f8fafc;
+
+}
+
+body.dark .summaryCard p{
+
+    color:#cbd5e1;
+
+}
+
+body.dark .progressBar{
+
+    background:#334155;
+
+}
+
+body.dark .summaryCard span{
+
+    color:#60a5fa;
+
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media(max-width:992px){
+
+.summarySection{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media(max-width:768px){
+
+.profileButtons{
+
+    flex-direction:column;
+
+}
+
+.profileButtons button{
+
+    width:100%;
+
+}
+
+.logoutButton{
+
+    margin-left:0;
+
+}
+
+.summaryCard{
+
+    padding:22px;
+
+}
+
+.summaryCard h3{
+
+    font-size:20px;
+
+}
+
+.summaryCard p{
+
+    font-size:14px;
+
+}
+
+}
+
+/* ===========================
+   Selection
+=========================== */
+
+::selection{
+
+    background:#2563eb;
+
+    color:#fff;
+
+}
+
+/* ===========================
+   Reduced Motion
+=========================== */
+
+@media(prefers-reduced-motion:reduce){
+
+*{
+
+    animation:none !important;
+
+    transition:none !important;
+
+    scroll-behavior:auto !important;
+
+}
+
+}

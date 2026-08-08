@@ -1,0 +1,215 @@
+/* ==========================================
+   TESTIMONIALS SECTION
+========================================== */
+
+.testimonial-section{
+    padding:120px 0;
+    background:#f8fbff;
+    transition:.3s;
+}
+
+body.dark .testimonial-section{
+    background:#111827;
+}
+
+.testimonial-slider{
+
+    width:min(92%,1400px);
+    margin:auto;
+
+    display:flex;
+    gap:28px;
+
+    overflow-x:auto;
+
+    padding:15px 5px 20px;
+
+    scroll-behavior:smooth;
+
+}
+
+.testimonial-slider::-webkit-scrollbar{
+
+height:8px;
+
+}
+
+.testimonial-slider::-webkit-scrollbar-thumb{
+
+background:#2563eb;
+
+border-radius:20px;
+
+}
+
+.testimonial-card{
+
+    min-width:380px;
+
+    padding:35px;
+
+    border-radius:24px;
+
+    background:white;
+
+    border:1px solid #e5e7eb;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.06);
+
+    transition:.35s;
+
+    flex-shrink:0;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+body.dark .testimonial-card{
+
+background:#1e293b;
+
+border-color:#334155;
+
+}
+
+.testimonial-card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:0;
+
+width:100%;
+height:5px;
+
+background:linear-gradient(
+90deg,
+#2563eb,
+#4f46e5,
+#06b6d4
+);
+
+}
+
+.testimonial-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 25px 50px rgba(37,99,235,.18);
+
+}
+
+.review-header{
+
+margin-bottom:18px;
+
+}
+
+.review-header h3{
+
+font-size:22px;
+
+font-weight:700;
+
+margin-bottom:6px;
+
+color:#111827;
+
+}
+
+body.dark .review-header h3{
+
+color:white;
+
+}
+
+.review-header span{
+
+font-size:15px;
+
+color:#2563eb;
+
+font-weight:600;
+
+}
+.rating{
+
+font-size:22px;
+
+margin-bottom:18px;
+
+color:#f59e0b;
+
+}
+.review{
+
+font-size:16px;
+
+line-height:1.8;
+
+color:#64748b;
+
+margin:18px 0;
+
+min-height:90px;
+
+}
+
+body.dark .review{
+
+color:#cbd5e1;
+
+}
+
+/* Tablet */
+
+@media(max-width:992px){
+
+.testimonial-card{
+
+min-width:300px;
+
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.testimonial-section{
+
+padding:80px 0;
+
+}
+
+.testimonial-slider{
+
+gap:20px;
+
+padding-left:20px;
+
+}
+
+.testimonial-card{
+
+min-width:270px;
+
+padding:28px;
+
+}
+
+
+.review{
+
+min-height:auto;
+
+font-size:15px;
+
+}
+
+}

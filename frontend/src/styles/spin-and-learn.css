@@ -1,0 +1,90 @@
+.spin-page{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#eef6ff,#dbeafe);
+    padding:30px;
+}
+
+.spin-card{
+    width:100%;
+    max-width:650px;
+    background:#fff;
+    border-radius:20px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.spin-card h1{
+    color:#2563eb;
+    margin-bottom:15px;
+}
+
+.spin-card h2{
+    color:#1e293b;
+    margin-bottom:20px;
+}
+
+.spin-card h3{
+    margin:25px 0;
+    color:#475569;
+    font-weight:600;
+}
+
+.spin-btn{
+    margin-top:20px;
+    padding:14px 30px;
+    border:none;
+    border-radius:12px;
+    background:#2563eb;
+    color:#fff;
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.spin-btn:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+}
+
+.option-btn{
+    width:100%;
+    margin:10px 0;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    background:#f1f5f9;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+.option-btn:hover{
+    background:#2563eb;
+    color:#fff;
+}
+
+.spin-card p{
+    margin-top:20px;
+    font-weight:600;
+    color:#16a34a;
+}
+
+@media(max-width:768px){
+
+.spin-card{
+    padding:25px;
+}
+
+.option-btn{
+    font-size:15px;
+}
+
+.spin-btn{
+    width:100%;
+}
+
+}

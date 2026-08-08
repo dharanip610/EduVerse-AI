@@ -1,0 +1,2724 @@
+/* =========================================================
+   EDUVERSE AI TUTOR
+   CLEAN CSS
+   PART 1
+========================================================= */
+
+/* =========================
+   ROOT
+========================= */
+
+:root {
+    --ai-primary: #2563eb;
+    --ai-primary-light: #3b82f6;
+    --ai-primary-soft: #dbeafe;
+
+    --ai-bg: #f5f8ff;
+    --ai-card: #ffffff;
+    --ai-text: #0f172a;
+    --ai-muted: #64748b;
+
+    --ai-border: #e2e8f0;
+
+    --ai-sidebar: #111827;
+    --ai-sidebar-card: #1f2937;
+
+    --ai-shadow:
+        0 12px 35px rgba(37, 99, 235, 0.08);
+}
+
+
+/* =========================
+   RESET
+========================= */
+
+.aiTutorPage *,
+.aiTutorPage *::before,
+.aiTutorPage *::after {
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   MAIN PAGE
+========================= */
+
+.aiTutorPage {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8fbff 0%,
+            #eef5ff 50%,
+            #f8fbff 100%
+        );
+
+    color: var(--ai-text);
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+
+.aiTutorLayout {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 300px minmax(0, 1fr);
+
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.tutorSidebar {
+    position: relative;
+
+    width: 300px;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 26px 20px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #111827 0%,
+            #0f172a 100%
+        );
+
+    color: #ffffff;
+
+    overflow-y: auto;
+
+    z-index: 20;
+
+    transition:
+        transform 0.3s ease,
+        width 0.3s ease;
+}
+
+
+/* Sidebar scrollbar */
+
+.tutorSidebar::-webkit-scrollbar {
+    width: 5px;
+}
+
+.tutorSidebar::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 20px;
+}
+
+
+/* =========================
+   SIDEBAR HEADER
+========================= */
+
+.sidebarHeader {
+    padding-bottom: 24px;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.sidebarLogo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+.logoIcon {
+    width: 52px;
+    height: 52px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #06b6d4
+        );
+
+    color: #ffffff;
+
+    font-size: 23px;
+
+    box-shadow:
+        0 12px 28px rgba(37, 99, 235, 0.35);
+}
+
+
+.sidebarLogo h2 {
+    margin: 0;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    color: #ffffff;
+}
+
+
+.sidebarLogo p {
+    margin: 4px 0 0;
+
+    font-size: 12px;
+
+    color: #94a3b8;
+}
+
+
+/* =========================
+   ONLINE BADGE
+========================= */
+
+.sidebarBadge {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-top: 18px;
+
+    padding: 7px 13px;
+
+    border-radius: 999px;
+
+    background:
+        rgba(34, 197, 94, 0.12);
+
+    color: #86efac;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+.sidebarBadge::before {
+    content: "";
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #22c55e;
+
+    box-shadow:
+        0 0 0 4px rgba(34, 197, 94, 0.1);
+}
+
+
+/* =========================
+   SIDEBAR SECTION
+========================= */
+
+.sidebarSection {
+    margin-top: 26px;
+}
+
+
+.sidebarSection h4 {
+    margin: 0 0 13px;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.2px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   SUBJECT BUTTON
+========================= */
+
+.subjectButton {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 11px 12px;
+
+    margin-bottom: 7px;
+
+    border: 0;
+
+    border-radius: 13px;
+
+    background: transparent;
+
+    color: #cbd5e1;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.subjectButton:hover {
+    background: rgba(255, 255, 255, 0.07);
+
+    color: #ffffff;
+
+    transform: translateX(2px);
+}
+
+
+.subjectButton.active {
+    background: #ffffff;
+
+    color: #2563eb;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================
+   SUBJECT ICON
+========================= */
+
+.subjectIcon {
+    width: 36px;
+    height: 36px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #1e293b;
+
+    color: #cbd5e1;
+
+    font-size: 15px;
+
+    transition: 0.2s ease;
+}
+
+
+.subjectButton.active .subjectIcon {
+    background: #dbeafe;
+
+    color: #2563eb;
+}
+
+
+.subjectName {
+    flex: 1;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   LEARNING TOOLS
+========================= */
+
+.sidebarAction {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 13px;
+
+    margin-bottom: 7px;
+
+    border: 0;
+
+    border-radius: 13px;
+
+    background: transparent;
+
+    color: #cbd5e1;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    font-size: 14px;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.sidebarAction:hover {
+    background: rgba(255, 255, 255, 0.07);
+
+    color: #ffffff;
+
+    transform: translateX(2px);
+}
+
+
+.sidebarAction svg {
+    width: 16px;
+
+    color: #93c5fd;
+}
+
+
+/* =========================
+   SIDEBAR BOTTOM
+========================= */
+
+.sidebarBottom {
+    margin-top: auto;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================
+   SETTINGS BUTTON
+========================= */
+
+.settingsButton {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    padding: 12px 15px;
+
+    border: 0;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #3b82f6
+        );
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 10px 24px rgba(37, 99, 235, 0.25);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.settingsButton:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 14px 28px rgba(37, 99, 235, 0.32);
+}
+
+
+/* =========================
+   MOBILE MENU BUTTON
+========================= */
+
+.mobileMenuBtn {
+    display: none;
+
+    position: fixed;
+
+    top: 18px;
+    left: 18px;
+
+    width: 46px;
+    height: 46px;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 0;
+
+    border-radius: 13px;
+
+    background: #2563eb;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    box-shadow:
+        0 10px 25px rgba(37, 99, 235, 0.28);
+
+    z-index: 100;
+}
+
+
+/* =========================
+   SIDEBAR OVERLAY
+========================= */
+
+.sidebarOverlay {
+    display: none;
+}
+
+
+/* =========================
+   AURORA
+========================= */
+
+.aurora {
+    position: fixed;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    filter: blur(90px);
+
+    opacity: 0.25;
+
+    z-index: 0;
+}
+
+
+.aurora.one {
+    width: 280px;
+    height: 280px;
+
+    top: -100px;
+    left: 250px;
+
+    background: #60a5fa;
+}
+
+
+.aurora.two {
+    width: 240px;
+    height: 240px;
+
+    right: -80px;
+    top: 100px;
+
+    background: #38bdf8;
+}
+
+
+.aurora.three {
+    width: 260px;
+    height: 260px;
+
+    bottom: -100px;
+    left: 45%;
+
+    background: #818cf8;
+}
+
+
+/* Keep actual UI above aurora */
+
+.aiTutorLayout {
+    z-index: 1;
+}
+
+
+/* =========================
+   CLOSED SIDEBAR
+========================= */
+
+.tutorSidebar.closed {
+    transform: translateX(-100%);
+}
+
+
+/* =========================
+   OPEN SIDEBAR
+========================= */
+
+.tutorSidebar.open {
+    transform: translateX(0);
+}
+/* =========================================================
+   EDUVERSE AI TUTOR
+   PART 2
+   MAIN CHAT + HEADER
+========================================================= */
+
+
+/* =========================
+   CHAT SECTION
+========================= */
+
+.chatSection {
+    position: relative;
+
+    min-width: 0;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background: rgba(248, 251, 255, 0.88);
+
+    overflow: hidden;
+
+    z-index: 2;
+}
+
+
+/* =========================
+   CHAT HEADER
+========================= */
+
+.chatHeader {
+    position: relative;
+
+    min-height: 92px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    padding: 18px 30px;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    border-bottom: 1px solid var(--ai-border);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    z-index: 5;
+}
+
+
+/* =========================
+   CHAT TITLE
+========================= */
+
+.chatTitle {
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+}
+
+
+/* =========================
+   AI AVATAR
+========================= */
+
+.aiAvatar {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    flex-shrink: 0;
+}
+
+
+.avatarCircle {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #06b6d4
+        );
+
+    color: #ffffff;
+
+    font-size: 22px;
+
+    box-shadow:
+        0 10px 25px rgba(37, 99, 235, 0.25);
+}
+
+
+.avatarStatus {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #64748b;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+.statusDot {
+    width: 8px;
+    height: 8px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #22c55e;
+
+    box-shadow:
+        0 0 0 4px rgba(34, 197, 94, 0.1);
+}
+
+
+/* =========================
+   HEADER CONTENT
+========================= */
+
+.chatHeaderContent {
+    min-width: 0;
+}
+
+
+.chatHeaderBadge {
+    display: inline-flex;
+
+    align-items: center;
+
+    margin-bottom: 5px;
+
+    padding: 4px 9px;
+
+    border-radius: 999px;
+
+    background: #dbeafe;
+
+    color: #2563eb;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.7px;
+}
+
+
+.chatHeaderContent h2 {
+    margin: 0;
+
+    color: #0f172a;
+
+    font-size: 21px;
+
+    font-weight: 750;
+
+    line-height: 1.25;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+.chatHeaderContent p {
+    margin: 4px 0 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* =========================
+   SUBJECT SELECTOR
+========================= */
+
+.subjectSelector {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    flex-shrink: 0;
+}
+
+
+.subjectSelectorIcon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #dbeafe;
+
+    color: #2563eb;
+
+    font-size: 16px;
+}
+
+
+.subjectDropdown {
+    height: 42px;
+
+    min-width: 155px;
+
+    padding: 0 14px;
+
+    border: 1px solid #dbe4f2;
+
+    border-radius: 12px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #0f172a;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 6px 18px rgba(37, 99, 235, 0.06);
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.subjectDropdown:hover {
+    border-color: #93c5fd;
+}
+
+
+.subjectDropdown:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* =========================
+   CHAT AREA
+========================= */
+
+.chatMessages {
+    flex: 1;
+
+    min-height: 0;
+
+    overflow-y: auto;
+
+    padding: 28px 32px 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(219, 234, 254, 0.55),
+            transparent 32%
+        ),
+
+        #f6f9ff;
+
+    scroll-behavior: smooth;
+}
+
+
+/* =========================
+   CHAT SCROLLBAR
+========================= */
+
+.chatMessages::-webkit-scrollbar {
+    width: 7px;
+}
+
+
+.chatMessages::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+.chatMessages::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+
+    border-radius: 999px;
+}
+
+
+.chatMessages::-webkit-scrollbar-thumb:hover {
+    background: #93c5fd;
+}
+
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.emptyStateCard {
+    width: min(560px, 100%);
+
+    margin: auto;
+
+    padding: 38px 35px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 20px 45px rgba(37, 99, 235, 0.08);
+
+    backdrop-filter: blur(12px);
+
+    animation:
+        emptyStateIn 0.45s ease;
+}
+
+
+@keyframes emptyStateIn {
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(12px)
+            scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+.emptyStateIcon {
+    width: 64px;
+    height: 64px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #dbeafe,
+            #e0f2fe
+        );
+
+    color: #2563eb;
+
+    font-size: 27px;
+}
+
+
+.emptyStateCard h3 {
+    margin: 0;
+
+    color: #0f172a;
+
+    font-size: 22px;
+}
+
+
+.emptyStateCard p {
+    max-width: 420px;
+
+    margin: 9px auto 0;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+/* =========================================================
+   EDUVERSE AI TUTOR
+   PART 3
+   CHAT MESSAGES + BUBBLES + TYPING
+========================================================= */
+
+
+/* =========================
+   MESSAGE ROW
+========================= */
+
+.message {
+    width: 100%;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    gap: 11px;
+
+    animation: messageIn 0.25s ease;
+}
+
+
+.message.assistant {
+    justify-content: flex-start;
+}
+
+
+.message.user {
+    justify-content: flex-end;
+}
+
+
+/* =========================
+   MESSAGE AVATAR
+========================= */
+
+.messageAvatar {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    font-size: 17px;
+}
+
+
+.message.assistant .messageAvatar {
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #06b6d4
+        );
+
+    color: #ffffff;
+
+    box-shadow:
+        0 7px 18px rgba(37, 99, 235, 0.2);
+}
+
+
+.userAvatar {
+    background: #e2e8f0;
+
+    color: #475569;
+}
+
+
+/* =========================
+   MESSAGE CONTENT
+========================= */
+
+.messageContent {
+    max-width: min(72%, 720px);
+
+    min-width: 0;
+}
+
+
+.messageBubble {
+    padding: 14px 17px;
+
+    border-radius: 18px;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    word-break: break-word;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.messageBubble:hover {
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   ASSISTANT MESSAGE
+========================= */
+
+.message.assistant .messageBubble {
+    background: #ffffff;
+
+    color: #1e293b;
+
+    border:
+        1px solid #e2e8f0;
+
+    border-bottom-left-radius: 6px;
+
+    box-shadow:
+        0 8px 25px rgba(15, 23, 42, 0.06);
+}
+
+
+/* =========================
+   USER MESSAGE
+========================= */
+
+.message.user .messageBubble {
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #3b82f6
+        );
+
+    color: #ffffff;
+
+    border-bottom-right-radius: 6px;
+
+    box-shadow:
+        0 10px 25px rgba(37, 99, 235, 0.2);
+}
+
+
+.messageBubble p {
+    margin: 0;
+}
+
+
+/* =========================
+   MESSAGE TIME
+========================= */
+
+.messageTime {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #94a3b8;
+
+    font-size: 10px;
+
+    line-height: 1.3;
+}
+
+
+.message.user .messageTime {
+    text-align: right;
+}
+
+
+/* =========================
+   TYPING MESSAGE
+========================= */
+
+.typingMessage {
+    align-items: flex-start;
+}
+
+
+.typingBubble {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    min-width: 62px;
+
+    min-height: 42px;
+}
+
+
+/* =========================
+   TYPING DOT
+========================= */
+
+.typingDot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #2563eb;
+
+    animation: typingDot 1.2s infinite ease-in-out;
+}
+
+
+.typingDot:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+
+.typingDot:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+
+@keyframes typingDot {
+
+    0%,
+    60%,
+    100% {
+        opacity: 0.35;
+
+        transform: translateY(0);
+    }
+
+    30% {
+        opacity: 1;
+
+        transform: translateY(-4px);
+    }
+}
+
+
+/* =========================
+   MESSAGE ANIMATION
+========================= */
+
+@keyframes messageIn {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================
+   AI ONLINE PULSE
+========================= */
+
+.statusDot {
+    animation:
+        onlinePulse 1.8s infinite;
+}
+
+
+@keyframes onlinePulse {
+
+    0% {
+        box-shadow:
+            0 0 0 0 rgba(34, 197, 94, 0.35);
+    }
+
+    70% {
+        box-shadow:
+            0 0 0 6px rgba(34, 197, 94, 0);
+    }
+
+    100% {
+        box-shadow:
+            0 0 0 0 rgba(34, 197, 94, 0);
+    }
+}
+/* =========================================================
+   EDUVERSE AI TUTOR
+   PART 4
+   SUGGESTIONS + CHAT INPUT + SEND + VOICE
+========================================================= */
+
+
+/* =========================
+   SUGGESTION AREA
+========================= */
+
+.suggestionWrapper {
+    padding: 16px 30px;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+
+    backdrop-filter: blur(12px);
+
+    flex-shrink: 0;
+}
+
+
+.suggestionCards {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+}
+
+
+.suggestionCards::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* =========================
+   SUGGESTION CARD
+========================= */
+
+.suggestionCard {
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    min-height: 42px;
+
+    padding: 10px 14px;
+
+    border: 1px solid #dbe7f5;
+
+    border-radius: 13px;
+
+    background: #ffffff;
+
+    color: #334155;
+
+    cursor: pointer;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 5px 15px rgba(37, 99, 235, 0.05);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.suggestionCard:hover {
+    transform: translateY(-2px);
+
+    border-color: #93c5fd;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+}
+
+
+.suggestionCard:disabled {
+    opacity: 0.5;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+.suggestionText {
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   CHAT INPUT
+========================================================= */
+
+.chatInputWrapper {
+    width: 100%;
+
+    padding: 18px 30px 20px;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    border-top: 1px solid #e2e8f0;
+
+    flex-shrink: 0;
+
+    backdrop-filter: blur(16px);
+}
+
+
+/* =========================
+   INPUT BOX
+========================= */
+
+.chatInputBox {
+    width: 100%;
+
+    min-height: 58px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    gap: 10px;
+
+    padding: 7px 8px 7px 16px;
+
+    border: 1px solid #dbe4f0;
+
+    border-radius: 18px;
+
+    background: #f8fbff;
+
+    box-shadow:
+        0 8px 25px rgba(37, 99, 235, 0.06);
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.chatInputBox:focus-within {
+    border-color: #60a5fa;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+
+/* =========================
+   TEXTAREA
+========================= */
+
+.chatInput {
+    flex: 1;
+
+    width: 100%;
+
+    min-height: 42px;
+
+    max-height: 130px;
+
+    padding: 10px 0;
+
+    resize: none;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #0f172a;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+.chatInput::placeholder {
+    color: #94a3b8;
+}
+
+
+.chatInput:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================
+   SEND BUTTON
+========================= */
+
+.sendBtn {
+    width: 44px;
+    height: 44px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #3b82f6
+        );
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    box-shadow:
+        0 8px 20px rgba(37, 99, 235, 0.22);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        opacity 0.2s ease;
+}
+
+
+.sendBtn:hover:not(:disabled) {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 11px 25px rgba(37, 99, 235, 0.3);
+}
+
+
+.sendBtn:active:not(:disabled) {
+    transform: scale(0.96);
+}
+
+
+.sendBtn:disabled {
+    opacity: 0.45;
+
+    cursor: not-allowed;
+
+    box-shadow: none;
+}
+
+
+/* =========================
+   INPUT HINT
+========================= */
+
+.chatInputHint {
+    margin: 8px 4px 0;
+
+    text-align: center;
+
+    color: #94a3b8;
+
+    font-size: 10px;
+
+    line-height: 1.4;
+}
+
+
+.chatInputHint strong {
+    color: #64748b;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   VOICE BUTTON
+========================================================= */
+
+.voiceButton {
+    position: relative;
+
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    border: 1px solid #dbe4f0;
+
+    border-radius: 13px;
+
+    background: #ffffff;
+
+    color: #2563eb;
+
+    cursor: pointer;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.voiceButton:hover {
+    transform: translateY(-2px);
+
+    border-color: #93c5fd;
+
+    background: #eff6ff;
+}
+
+
+.voiceButton.listening {
+    background: #fee2e2;
+
+    border-color: #fca5a5;
+
+    color: #dc2626;
+}
+
+
+.voicePulse {
+    position: absolute;
+
+    inset: -5px;
+
+    border: 2px solid #ef4444;
+
+    border-radius: 16px;
+
+    animation: voicePulse 1.4s infinite;
+
+    pointer-events: none;
+}
+
+
+@keyframes voicePulse {
+    0% {
+        opacity: 0.8;
+
+        transform: scale(0.95);
+    }
+
+    70% {
+        opacity: 0;
+
+        transform: scale(1.15);
+    }
+
+    100% {
+        opacity: 0;
+
+        transform: scale(1.15);
+    }
+}
+/* =========================================================
+   EDUVERSE AI TUTOR
+   PART 5
+   DARK MODE + RESPONSIVE + SIDEBAR
+========================================================= */
+
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+.aiTutorPage.dark {
+    --ai-bg: #020617;
+    --ai-card: #0f172a;
+    --ai-text: #f8fafc;
+    --ai-muted: #94a3b8;
+    --ai-border: #1e293b;
+
+    background:
+        linear-gradient(
+            135deg,
+            #020617 0%,
+            #0f172a 55%,
+            #020617 100%
+        );
+
+    color: #f8fafc;
+}
+
+
+/* =========================
+   DARK MAIN CHAT
+========================= */
+
+.aiTutorPage.dark .chatSection {
+    background: #020617;
+}
+
+
+.aiTutorPage.dark .chatHeader {
+    background: rgba(15, 23, 42, 0.94);
+
+    border-bottom-color: #1e293b;
+}
+
+
+.aiTutorPage.dark .chatHeaderContent h2 {
+    color: #f8fafc;
+}
+
+
+.aiTutorPage.dark .chatHeaderContent p {
+    color: #94a3b8;
+}
+
+
+.aiTutorPage.dark .chatHeaderBadge {
+    background: rgba(37, 99, 235, 0.18);
+
+    color: #93c5fd;
+}
+
+
+/* =========================
+   DARK SUBJECT SELECTOR
+========================= */
+
+.aiTutorPage.dark .subjectSelectorIcon {
+    background: rgba(37, 99, 235, 0.18);
+
+    color: #93c5fd;
+}
+
+
+.aiTutorPage.dark .subjectDropdown {
+    background: #111827;
+
+    border-color: #334155;
+
+    color: #f8fafc;
+}
+
+
+.aiTutorPage.dark .subjectDropdown option {
+    background: #111827;
+
+    color: #f8fafc;
+}
+
+
+/* =========================
+   DARK CHAT AREA
+========================= */
+
+.aiTutorPage.dark .chatMessages {
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(37, 99, 235, 0.12),
+            transparent 32%
+        ),
+        #020617;
+}
+
+
+/* =========================
+   DARK EMPTY STATE
+========================= */
+
+.aiTutorPage.dark .emptyStateCard {
+    background: rgba(15, 23, 42, 0.9);
+
+    border-color: #1e293b;
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.25);
+}
+
+
+.aiTutorPage.dark .emptyStateCard h3 {
+    color: #f8fafc;
+}
+
+
+.aiTutorPage.dark .emptyStateCard p {
+    color: #94a3b8;
+}
+
+
+.aiTutorPage.dark .emptyStateIcon {
+    background: rgba(37, 99, 235, 0.18);
+
+    color: #93c5fd;
+}
+
+
+/* =========================
+   DARK AI MESSAGE
+========================= */
+
+.aiTutorPage.dark .message.assistant .messageBubble {
+    background: #111827;
+
+    border-color: #1e293b;
+
+    color: #e2e8f0;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.18);
+}
+
+
+.aiTutorPage.dark .messageTime {
+    color: #64748b;
+}
+
+
+/* =========================
+   DARK USER MESSAGE
+========================= */
+
+.aiTutorPage.dark .message.user .messageBubble {
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #1d4ed8
+        );
+
+    color: #ffffff;
+}
+
+
+/* =========================
+   DARK USER AVATAR
+========================= */
+
+.aiTutorPage.dark .userAvatar {
+    background: #1e293b;
+
+    color: #cbd5e1;
+}
+
+
+/* =========================================================
+   DARK SUGGESTIONS
+========================================================= */
+
+.aiTutorPage.dark .suggestionWrapper {
+    background: rgba(15, 23, 42, 0.94);
+
+    border-color: #1e293b;
+}
+
+
+.aiTutorPage.dark .suggestionCard {
+    background: #111827;
+
+    border-color: #334155;
+
+    color: #cbd5e1;
+}
+
+
+.aiTutorPage.dark .suggestionCard:hover {
+    background: #172554;
+
+    border-color: #3b82f6;
+
+    color: #93c5fd;
+}
+
+
+/* =========================================================
+   DARK INPUT
+========================================================= */
+
+.aiTutorPage.dark .chatInputWrapper {
+    background: rgba(15, 23, 42, 0.96);
+
+    border-color: #1e293b;
+}
+
+
+.aiTutorPage.dark .chatInputBox {
+    background: #111827;
+
+    border-color: #334155;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.18);
+}
+
+
+.aiTutorPage.dark .chatInputBox:focus-within {
+    background: #0f172a;
+
+    border-color: #3b82f6;
+}
+
+
+.aiTutorPage.dark .chatInput {
+    color: #f8fafc;
+}
+
+
+.aiTutorPage.dark .chatInput::placeholder {
+    color: #64748b;
+}
+
+
+.aiTutorPage.dark .chatInputHint {
+    color: #64748b;
+}
+
+
+.aiTutorPage.dark .chatInputHint strong {
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   DARK VOICE BUTTON
+========================================================= */
+
+.aiTutorPage.dark .voiceButton {
+    background: #111827;
+
+    border-color: #334155;
+
+    color: #93c5fd;
+}
+
+
+.aiTutorPage.dark .voiceButton:hover {
+    background: #172554;
+
+    border-color: #3b82f6;
+}
+
+
+.aiTutorPage.dark .voiceButton.listening {
+    background: #450a0a;
+
+    border-color: #7f1d1d;
+
+    color: #fca5a5;
+}
+
+
+/* =========================================================
+   SIDEBAR TOGGLE
+========================================================= */
+
+.tutorSidebar.closed {
+    transform: translateX(-100%);
+}
+
+
+.tutorSidebar.open {
+    transform: translateX(0);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .aiTutorLayout {
+        display: block;
+
+        min-height: 100vh;
+    }
+
+
+    .tutorSidebar {
+        position: fixed;
+
+        top: 0;
+        left: 0;
+
+        width: 300px;
+        height: 100vh;
+
+        transform: translateX(-100%);
+
+        box-shadow:
+            12px 0 35px rgba(0, 0, 0, 0.18);
+    }
+
+
+    .tutorSidebar.open {
+        transform: translateX(0);
+    }
+
+
+    .tutorSidebar.closed {
+        transform: translateX(-100%);
+    }
+
+
+    .mobileMenuBtn {
+        display: flex;
+    }
+
+
+    .sidebarOverlay {
+        position: fixed;
+
+        inset: 0;
+
+        display: block;
+
+        background:
+            rgba(15, 23, 42, 0.45);
+
+        backdrop-filter: blur(3px);
+
+        z-index: 15;
+    }
+
+
+    .chatSection {
+        width: 100%;
+
+        min-height: 100vh;
+    }
+
+
+    .chatHeader {
+        padding-left: 78px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .chatHeader {
+        gap: 15px;
+
+        padding-right: 18px;
+    }
+
+
+    .chatHeaderContent h2 {
+        font-size: 18px;
+    }
+
+
+    .chatHeaderContent p {
+        font-size: 12px;
+    }
+
+
+    .subjectDropdown {
+        min-width: 130px;
+    }
+
+
+    .subjectSelectorIcon {
+        display: none;
+    }
+
+
+    .chatMessages {
+        padding: 22px 18px;
+    }
+
+
+    .suggestionWrapper {
+        padding:
+            13px 18px;
+    }
+
+
+    .chatInputWrapper {
+        padding:
+            14px 18px 17px;
+    }
+
+
+    .messageContent {
+        max-width: 78%;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .mobileMenuBtn {
+        top: 14px;
+        left: 14px;
+
+        width: 42px;
+        height: 42px;
+
+        border-radius: 12px;
+    }
+
+
+    .chatHeader {
+        min-height: 82px;
+
+        padding:
+            14px 14px 14px 68px;
+
+        gap: 10px;
+    }
+
+
+    .chatTitle {
+        gap: 10px;
+    }
+
+
+    .avatarCircle {
+        width: 43px;
+        height: 43px;
+
+        border-radius: 13px;
+
+        font-size: 18px;
+    }
+
+
+    .avatarStatus {
+        display: none;
+    }
+
+
+    .chatHeaderBadge {
+        margin-bottom: 3px;
+
+        padding: 3px 7px;
+
+        font-size: 8px;
+    }
+
+
+    .chatHeaderContent h2 {
+        font-size: 16px;
+    }
+
+
+    .chatHeaderContent p {
+        font-size: 10px;
+    }
+
+
+    .subjectSelector {
+        display: none;
+    }
+
+
+    .chatMessages {
+        padding:
+            18px 12px 20px;
+
+        gap: 15px;
+    }
+
+
+    .message {
+        gap: 7px;
+    }
+
+
+    .messageAvatar {
+        width: 32px;
+        height: 32px;
+
+        border-radius: 10px;
+
+        font-size: 14px;
+    }
+
+
+    .messageContent {
+        max-width: 82%;
+    }
+
+
+    .messageBubble {
+        padding:
+            11px 13px;
+
+        border-radius: 15px;
+
+        font-size: 13px;
+
+        line-height: 1.6;
+    }
+
+
+    .messageTime {
+        font-size: 9px;
+    }
+
+
+    .suggestionWrapper {
+        padding:
+            10px 12px;
+    }
+
+
+    .suggestionCard {
+        min-height: 37px;
+
+        padding:
+            8px 11px;
+
+        font-size: 11px;
+    }
+
+
+    .chatInputWrapper {
+        padding:
+            10px 12px 13px;
+    }
+
+
+    .chatInputBox {
+        min-height: 52px;
+
+        padding:
+            5px 6px 5px 12px;
+
+        border-radius: 15px;
+    }
+
+
+    .chatInput {
+        min-height: 38px;
+
+        font-size: 13px;
+    }
+
+
+    .sendBtn {
+        width: 40px;
+        height: 40px;
+
+        border-radius: 11px;
+    }
+
+
+    .chatInputHint {
+        display: none;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL SCREEN
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .tutorSidebar {
+        width: 280px;
+    }
+
+
+    .messageContent {
+        max-width: 85%;
+    }
+
+
+    .messageBubble {
+        font-size: 12px;
+    }
+}
+/* =========================================================
+   EDUVERSE AI TUTOR
+   PART 6
+   RECENT CHATS + SETTINGS + FINAL POLISH
+========================================================= */
+
+
+/* =========================================================
+   RECENT CHAT EMPTY
+========================================================= */
+
+.recentChatEmpty {
+    padding: 12px;
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    color: #94a3b8;
+
+    text-align: center;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   RECENT CHAT ITEM
+========================================================= */
+
+.recentChatItem {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 7px;
+}
+
+
+.recentChatContent {
+    flex: 1;
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    padding: 10px 12px;
+
+    border: 1px solid transparent;
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.045);
+
+    color: #cbd5e1;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.recentChatContent:hover {
+    background: rgba(37, 99, 235, 0.16);
+
+    border-color:
+        rgba(96, 165, 250, 0.2);
+
+    color: #ffffff;
+
+    transform: translateX(2px);
+}
+
+
+.recentChatLabel {
+    width: 100%;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+.recentChatHint {
+    margin-top: 3px;
+
+    color: #64748b;
+
+    font-size: 10px;
+}
+
+
+.recentDeleteBtn {
+    width: 32px;
+    height: 32px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 0;
+
+    border-radius: 9px;
+
+    background: transparent;
+
+    color: #64748b;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.recentDeleteBtn:hover {
+    background: rgba(239, 68, 68, 0.12);
+
+    color: #f87171;
+
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   SETTINGS OVERLAY
+========================================================= */
+
+.settingsOverlay {
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background:
+        rgba(15, 23, 42, 0.45);
+
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+
+    z-index: 200;
+
+    animation:
+        settingsOverlayIn 0.2s ease;
+}
+
+
+@keyframes settingsOverlayIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* =========================================================
+   SETTINGS MODAL
+========================================================= */
+
+.settingsModal {
+    width: min(430px, 100%);
+
+    padding: 26px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.5);
+
+    border-radius: 22px;
+
+    background:
+        rgba(255, 255, 255, 0.96);
+
+    box-shadow:
+        0 30px 80px rgba(15, 23, 42, 0.2);
+
+    animation:
+        settingsModalIn 0.25s ease;
+}
+
+
+@keyframes settingsModalIn {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(12px)
+            scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* =========================================================
+   SETTINGS TITLE
+========================================================= */
+
+.settingsModal h3 {
+    margin: 0 0 8px;
+
+    color: #0f172a;
+
+    font-size: 20px;
+}
+
+
+.settingsModal p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   DARK SETTINGS
+========================================================= */
+
+.aiTutorPage.dark .settingsModal {
+    background: #0f172a;
+
+    border-color: #1e293b;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.45);
+}
+
+
+.aiTutorPage.dark .settingsModal h3 {
+    color: #f8fafc;
+}
+
+
+.aiTutorPage.dark .settingsModal p {
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   GENERAL SMOOTHNESS
+========================================================= */
+
+.aiTutorPage button,
+.aiTutorPage textarea,
+.aiTutorPage select {
+    font-family: inherit;
+}
+
+
+.aiTutorPage button:focus-visible,
+.aiTutorPage select:focus-visible,
+.aiTutorPage textarea:focus-visible {
+    outline: 3px solid rgba(37, 99, 235, 0.2);
+
+    outline-offset: 2px;
+}
+
+
+/* =========================================================
+   SIDEBAR LOGO ANIMATION
+========================================================= */
+
+.logoIcon {
+    animation:
+        logoFloat 4s ease-in-out infinite;
+}
+
+
+@keyframes logoFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+
+/* =========================================================
+   PAGE LOAD
+========================================================= */
+
+.aiTutorPage {
+    animation:
+        tutorPageIn 0.35s ease;
+}
+
+
+@keyframes tutorPageIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* =========================================================
+   REDUCE MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .aiTutorPage *,
+    .aiTutorPage *::before,
+    .aiTutorPage *::after {
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+    }
+}

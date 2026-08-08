@@ -1,0 +1,904 @@
+/* ==========================================
+   LESSON PAGE - PART 1
+   Layout + Hero
+========================================== */
+
+.lesson-page{
+
+    min-height:100vh;
+    padding:40px;
+    background:#f5f9ff;
+    transition:.3s;
+
+}
+
+/* ================= Hero ================= */
+
+.lesson-header{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+
+    padding:35px;
+
+    border-radius:28px;
+
+    background:linear-gradient(135deg,#2563eb,#4f46e5);
+
+    color:#fff;
+
+    box-shadow:0 20px 45px rgba(37,99,235,.20);
+
+    margin-bottom:30px;
+
+}
+
+.lesson-header h1{
+
+    font-size:42px;
+    margin-bottom:10px;
+    font-weight:700;
+
+}
+
+.lesson-header p{
+
+    max-width:650px;
+    line-height:1.8;
+    opacity:.95;
+
+}
+
+/* ================= Continue Button ================= */
+
+.progress-btn{
+
+    border:none;
+
+    padding:16px 30px;
+
+    border-radius:16px;
+
+    background:#fff;
+
+    color:#2563eb;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.progress-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 35px rgba(255,255,255,.25);
+
+}
+
+/* ================= Dark ================= */
+
+body.dark .lesson-page{
+
+    background:#0f172a;
+
+}
+
+/* ================= Tablet ================= */
+
+@media(max-width:992px){
+
+.lesson-header{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+}
+
+}
+
+/* ================= Mobile ================= */
+
+@media(max-width:768px){
+
+.lesson-page{
+
+padding:20px;
+
+}
+
+.lesson-header{
+
+padding:24px;
+
+}
+
+.lesson-header h1{
+
+font-size:30px;
+
+}
+
+.progress-btn{
+
+width:100%;
+
+}
+
+}
+/* ==========================================
+   LESSON PAGE - PART 2
+   Stats Cards
+========================================== */
+
+.lesson-stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:24px;
+
+    margin-bottom:35px;
+
+}
+
+.lesson-stat{
+
+    background:#ffffff;
+
+    border-radius:22px;
+
+    padding:28px 20px;
+
+    text-align:center;
+
+    border:1px solid rgba(37,99,235,.08);
+
+    box-shadow:0 12px 30px rgba(15,23,42,.08);
+
+    transition:.35s ease;
+
+    cursor:pointer;
+
+}
+
+.lesson-stat:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 22px 45px rgba(37,99,235,.15);
+
+    border-color:#2563eb;
+
+}
+
+.lesson-stat h2{
+
+    font-size:38px;
+
+    color:#2563eb;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+.lesson-stat span{
+
+    color:#64748b;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+/* ================= Dark Theme ================= */
+
+body.dark .lesson-stat{
+
+    background:#1e293b;
+
+    border:1px solid #334155;
+
+}
+
+body.dark .lesson-stat span{
+
+    color:#cbd5e1;
+
+}
+
+/* ================= Tablet ================= */
+
+@media(max-width:992px){
+
+.lesson-stats{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+/* ================= Mobile ================= */
+
+@media(max-width:768px){
+
+.lesson-stats{
+
+grid-template-columns:1fr;
+
+gap:18px;
+
+}
+
+.lesson-stat{
+
+padding:24px;
+
+}
+
+.lesson-stat h2{
+
+font-size:32px;
+
+}
+
+}
+/* ==========================================
+   LESSON PAGE - PART 3
+   Lesson Cards
+========================================== */
+
+/* ================= Grid ================= */
+
+.lesson-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+
+    gap:25px;
+
+}
+
+/* ================= Card ================= */
+
+.lesson-card{
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:#ffffff;
+
+    border-radius:24px;
+
+    padding:28px;
+
+    border:1px solid rgba(37,99,235,.08);
+
+    box-shadow:0 12px 30px rgba(15,23,42,.08);
+
+    overflow:hidden;
+
+    transition:all .35s ease;
+
+}
+
+.lesson-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 22px 45px rgba(37,99,235,.15);
+
+}
+
+.lesson-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:5px;
+
+    background:linear-gradient(90deg,#2563eb,#4f46e5);
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    transition:.35s;
+
+}
+
+.lesson-card:hover::before{
+
+    transform:scaleX(1);
+
+}
+
+/* ================= Top ================= */
+
+.lesson-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:22px;
+
+}
+
+.lesson-number{
+
+    width:50px;
+
+    height:50px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,#2563eb,#4f46e5);
+
+    color:#fff;
+
+    font-size:20px;
+
+    font-weight:700;
+
+}
+
+.lesson-status{
+
+    background:#dcfce7;
+
+    color:#15803d;
+
+    padding:8px 15px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+/* ================= Content ================= */
+
+.lesson-card h2{
+
+    font-size:24px;
+
+    color:#0f172a;
+
+    margin-bottom:15px;
+
+}
+
+.lesson-card p{
+
+    flex:1;
+
+    color:#64748b;
+
+    line-height:1.8;
+
+    margin-bottom:20px;
+
+}
+
+.lesson-info{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:22px;
+
+    color:#64748b;
+
+    font-weight:600;
+
+}
+
+/* ================= Buttons ================= */
+
+.lesson-actions{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:12px;
+
+}
+
+.lesson-actions button{
+
+    border:none;
+
+    padding:12px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.ai-btn{
+
+    background:#dbeafe;
+
+    color:#2563eb;
+
+}
+
+.quiz-btn{
+
+    background:#ede9fe;
+
+    color:#6d28d9;
+
+}
+
+.game-btn{
+
+    background:#dcfce7;
+
+    color:#15803d;
+
+}
+
+.lesson-actions button:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* ================= Empty ================= */
+
+.empty-lessons{
+
+    grid-column:1/-1;
+
+    text-align:center;
+
+    padding:70px 30px;
+
+    border-radius:24px;
+
+    background:#ffffff;
+
+    border:2px dashed #cbd5e1;
+
+}
+
+.empty-lessons h2{
+
+    margin-bottom:12px;
+
+    color:#0f172a;
+
+}
+
+.empty-lessons p{
+
+    color:#64748b;
+
+}
+
+/* ================= Dark Theme ================= */
+
+body.dark .lesson-card,
+body.dark .empty-lessons{
+
+    background:#1e293b;
+
+    border:1px solid #334155;
+
+}
+
+body.dark .lesson-card h2,
+body.dark .empty-lessons h2{
+
+    color:#ffffff;
+
+}
+
+body.dark .lesson-card p,
+body.dark .lesson-info,
+body.dark .empty-lessons p{
+
+    color:#cbd5e1;
+
+}
+
+body.dark .lesson-status{
+
+    background:#14532d;
+
+    color:#bbf7d0;
+
+}
+
+body.dark .ai-btn{
+
+    background:#1e40af;
+
+    color:#dbeafe;
+
+}
+
+body.dark .quiz-btn{
+
+    background:#5b21b6;
+
+    color:#ede9fe;
+
+}
+
+body.dark .game-btn{
+
+    background:#166534;
+
+    color:#dcfce7;
+
+}
+
+/* ================= Mobile ================= */
+
+@media(max-width:768px){
+
+.lesson-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.lesson-card{
+
+padding:22px;
+
+}
+
+.lesson-actions{
+
+grid-template-columns:1fr;
+
+}
+
+.lesson-actions button{
+
+width:100%;
+
+}
+
+.lesson-info{
+
+flex-direction:column;
+
+gap:10px;
+
+}
+
+}
+/* ==========================================
+   LESSON PAGE - PART 4
+   Final Polish
+========================================== */
+
+/* ============== Glow Effect ============== */
+
+.lesson-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:24px;
+
+    pointer-events:none;
+
+    background:linear-gradient(
+        135deg,
+        rgba(37,99,235,.08),
+        transparent,
+        rgba(79,70,229,.08)
+    );
+
+    opacity:0;
+
+    transition:.35s ease;
+
+}
+
+.lesson-card:hover::after{
+
+    opacity:1;
+
+}
+
+/* ============== Hover Text ============== */
+
+.lesson-card:hover h2{
+
+    color:#2563eb;
+
+}
+
+.lesson-card:hover p{
+
+    color:#475569;
+
+}
+
+/* ============== Animation ============== */
+
+.lesson-card{
+
+    animation:lessonFade .5s ease both;
+
+}
+
+.lesson-card:nth-child(2){animation-delay:.08s;}
+.lesson-card:nth-child(3){animation-delay:.16s;}
+.lesson-card:nth-child(4){animation-delay:.24s;}
+.lesson-card:nth-child(5){animation-delay:.32s;}
+.lesson-card:nth-child(6){animation-delay:.40s;}
+
+@keyframes lessonFade{
+
+    from{
+
+        opacity:0;
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ============== Buttons Hover ============== */
+
+.ai-btn:hover{
+
+    background:#2563eb;
+    color:#fff;
+
+}
+
+.quiz-btn:hover{
+
+    background:#6d28d9;
+    color:#fff;
+
+}
+
+.game-btn:hover{
+
+    background:#15803d;
+    color:#fff;
+
+}
+
+/* ============== Dark Hover ============== */
+
+body.dark .lesson-card:hover{
+
+    box-shadow:0 20px 45px rgba(96,165,250,.18);
+
+}
+
+body.dark .lesson-card:hover h2{
+
+    color:#60a5fa;
+
+}
+
+body.dark .lesson-card:hover p{
+
+    color:#e2e8f0;
+
+}
+
+body.dark .lesson-card::after{
+
+    background:linear-gradient(
+        135deg,
+        rgba(96,165,250,.12),
+        transparent,
+        rgba(79,70,229,.12)
+    );
+
+}
+
+/* ============== Large Desktop ============== */
+
+@media(min-width:1400px){
+
+.lesson-page{
+
+    max-width:1450px;
+
+    margin:auto;
+
+}
+
+.lesson-grid{
+
+    grid-template-columns:repeat(3,1fr);
+
+}
+
+}
+
+/* ============== Laptop ============== */
+
+@media(max-width:1200px){
+
+.lesson-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+/* ============== Tablet ============== */
+
+@media(max-width:992px){
+
+.lesson-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:22px;
+
+}
+
+}
+
+/* ============== Mobile ============== */
+
+@media(max-width:768px){
+
+.lesson-page{
+
+    padding:18px;
+
+}
+
+.lesson-header{
+
+    border-radius:20px;
+
+}
+
+.lesson-card{
+
+    border-radius:20px;
+
+}
+
+.lesson-number{
+
+    width:42px;
+    height:42px;
+    font-size:18px;
+
+}
+
+.lesson-status{
+
+    font-size:12px;
+    padding:6px 12px;
+
+}
+
+}
+
+/* ============== Small Mobile ============== */
+
+@media(max-width:480px){
+
+.lesson-header h1{
+
+    font-size:24px;
+
+}
+
+.lesson-header p{
+
+    font-size:14px;
+
+}
+
+.lesson-stat{
+
+    padding:18px;
+
+}
+
+.lesson-card{
+
+    padding:18px;
+
+}
+
+.lesson-card h2{
+
+    font-size:20px;
+
+}
+
+.lesson-card p{
+
+    font-size:14px;
+
+    line-height:1.6;
+
+}
+
+.lesson-actions{
+
+    gap:10px;
+
+}
+
+.lesson-actions button{
+
+    font-size:14px;
+
+    padding:10px;
+
+}
+
+}
+
+/* ============== Selection ============== */
+
+::selection{
+
+    background:#2563eb;
+
+    color:#fff;
+
+}

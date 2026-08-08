@@ -1,0 +1,229 @@
+/* ===================================
+   FORGOT PASSWORD PAGE
+=================================== */
+
+.forgot-page{
+    min-height:100vh;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    padding:40px 20px;
+    background:
+        radial-gradient(circle at 10% 12%,#dbeafe 0%,transparent 34%),
+        radial-gradient(circle at 90% 88%,#cffafe 0%,transparent 30%),
+        linear-gradient(135deg,#ffffff,#f8fbff,#eef5ff);
+}
+
+.forgot-page::before,
+.forgot-page::after{
+    content:"";
+    position:absolute;
+    border-radius:50%;
+    filter:blur(95px);
+    opacity:.32;
+}
+
+.forgot-page::before{
+    width:440px;
+    height:440px;
+    left:-140px;
+    top:-160px;
+    background:#60a5fa;
+}
+
+.forgot-page::after{
+    width:380px;
+    height:380px;
+    right:-120px;
+    bottom:-120px;
+    background:#22d3ee;
+}
+
+.forgot-card{
+    position:relative;
+    z-index:2;
+    width:100%;
+    max-width:500px;
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    gap:16px;
+    padding:44px;
+    border-radius:24px;
+    text-align:center;
+    background:rgba(255,255,255,.82);
+    backdrop-filter:blur(22px);
+    border:1px solid rgba(255,255,255,.68);
+    box-shadow:0 28px 70px rgba(15,23,42,.12);
+}
+
+.forgot-logo{
+    color:#2563eb;
+    font-size:28px;
+    font-weight:800;
+}
+
+.forgot-icon{
+    width:64px;
+    height:64px;
+    display:grid;
+    place-items:center;
+    align-self:center;
+    border-radius:50%;
+    margin-top:2px;
+    color:#2563eb;
+    background:#dbeafe;
+    font-size:34px;
+    font-weight:800;
+    box-shadow:0 14px 35px rgba(37,99,235,.16);
+}
+
+.forgot-card h1{
+    color:#111827;
+    font-size:34px;
+    line-height:1.15;
+    margin:4px 0 0;
+    font-weight:800;
+}
+
+.forgot-card p{
+    color:#64748b;
+    line-height:1.65;
+    margin:0 0 8px;
+}
+
+.forgot-card input{
+    width:100%;
+    min-height:54px;
+    padding:15px 17px;
+    border:1px solid #dbe4f0;
+    border-radius:16px;
+    background:rgba(255,255,255,.9);
+    color:#111827;
+    font-size:16px;
+    outline:none;
+    transition:.25s;
+}
+
+.forgot-card input::placeholder{
+    color:#94a3b8;
+}
+
+.forgot-card input:focus{
+    border-color:#2563eb;
+    background:#fff;
+    box-shadow:0 0 0 4px rgba(37,99,235,.14);
+}
+
+.forgot-btn{
+    width:100%;
+    padding:16px;
+    margin-top:10px;
+    border:none;
+    border-radius:16px;
+    background:linear-gradient(135deg,#2563eb,#4f46e5);
+    color:#fff;
+    font-size:17px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.forgot-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 18px 38px rgba(37,99,235,.30);
+}
+
+.forgot-btn:active{
+    transform:scale(.98);
+}
+
+.back-login{
+    display:inline-block;
+    margin-top:8px;
+    text-decoration:none;
+    color:#2563eb;
+    font-weight:700;
+    transition:.25s;
+}
+
+.back-login:hover{
+    color:#1d4ed8;
+    text-decoration:underline;
+}
+
+/* ===================================
+   DARK MODE
+=================================== */
+
+body.dark .forgot-page{
+    background:
+        radial-gradient(circle at top left,#1e3a8a 0%,transparent 35%),
+        radial-gradient(circle at bottom right,#164e63 0%,transparent 35%),
+        linear-gradient(135deg,#020617,#0f172a,#111827);
+}
+
+body.dark .forgot-card{
+    background:rgba(30,41,59,.78);
+    border-color:rgba(255,255,255,.08);
+    color:#fff;
+}
+
+body.dark .forgot-card h1{
+    color:#fff;
+}
+
+body.dark .forgot-card p{
+    color:#cbd5e1;
+}
+
+body.dark .forgot-icon{
+    background:#1e3a8a;
+    color:#bfdbfe;
+}
+
+body.dark .forgot-card input{
+    background:#334155;
+    color:#fff;
+    border-color:#475569;
+}
+
+body.dark .forgot-card input::placeholder{
+    color:#94a3b8;
+}
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+
+@media(max-width:768px){
+    .forgot-page{
+        padding:28px 18px;
+    }
+
+    .forgot-card{
+        padding:32px 24px;
+    }
+
+    .forgot-logo{
+        font-size:25px;
+    }
+
+    .forgot-card h1{
+        font-size:28px;
+    }
+}
+
+@media(max-width:480px){
+    .forgot-card{
+        padding:28px 20px;
+        border-radius:20px;
+    }
+
+    .forgot-card input,
+    .forgot-btn{
+        font-size:15px;
+    }
+}
