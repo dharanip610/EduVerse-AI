@@ -4,11 +4,11 @@ import { Routes, Route } from "react-router-dom";
 import LandingPage from "../pages/Landing/LandingPage";
 
 // Auth
-import Login from "../pages/auth/Login";
-import Signup from "../pages/auth/Signup";
-import ForgotPassword from "../pages/auth/ForgotPassword";
-import OTPVerification from "../pages/auth/OTPVerification";
-import ResetPassword from "../pages/auth/ResetPassword";
+import Login from "../pages/Auth/Login";
+import Signup from "../pages/Auth/Signup";
+import ForgotPassword from "../pages/Auth/ForgotPassword";
+import OTPVerification from "../pages/Auth/OTPVerification";
+import ResetPassword from "../pages/Auth/ResetPassword";
 import AdminLogin from "../pages/auth/AdminLogin";
 import AdminSubjects from "../pages/Admin/AdminSubjects";
 import AdminAddQuiz from "../pages/Admin/AdminAddQuiz";
