@@ -9,7 +9,7 @@ import Signup from "../pages/Auth/Signup";
 import ForgotPassword from "../pages/Auth/ForgotPassword";
 import OTPVerification from "../pages/Auth/OTPVerification";
 import ResetPassword from "../pages/Auth/ResetPassword";
-import AdminLogin from "../pages/auth/AdminLogin";
+import AdminLogin from "../pages/Auth/AdminLogin";
 import AdminSubjects from "../pages/Admin/AdminSubjects";
 import AdminAddQuiz from "../pages/Admin/AdminAddQuiz";
 import AdminQuizManager from "../pages/Admin/AdminQuizManager";
@@ -30,23 +30,23 @@ import AdminDashboard from "../pages/Admin/AdminDashboard";
 
 
 // Student
-import Subjects from "../pages/student/Subjects";
-import SubjectDetails from "../pages/student/SubjectDetails";
-import Lesson from "../pages/student/Lesson";
+import Subjects from "../pages/Student/Subjects";
+import SubjectDetails from "../pages/Student/SubjectDetails";
+import Lesson from "../pages/Student/Lesson";
 import AITutor from "../pages/Student/AITutor";
-import Quiz from "../pages/student/Quiz";
-import Games from "../pages/student/Games";
-import MemoryMatch from "../pages/student/MemoryMatch";
-import SpeedQuiz from "../pages/student/SpeedQuiz";
-import WordPuzzle from "../pages/student/WordPuzzle";
-import MathChallenge from "../pages/student/MathChallenge";
-import ComingSoon from "../pages/student/ComingSoon";
-import Leaderboard from "../pages/student/Leaderboard";
-import Certificates from "../pages/student/Certificates";
-import Profile from "../pages/student/Profile";
-import Settings from "../pages/student/Settings";
-import ScienceAdventure from "../pages/student/ScienceAdventure";
-import SpinAndLearn from "../pages/student/SpinAndLearn";
+import Quiz from "../pages/Student/Quiz";
+import Games from "../pages/Student/Games";
+import MemoryMatch from "../pages/Student/MemoryMatch";
+import SpeedQuiz from "../pages/Student/SpeedQuiz";
+import WordPuzzle from "../pages/Student/WordPuzzle";
+import MathChallenge from "../pages/Student/MathChallenge";
+import ComingSoon from "../pages/Student/ComingSoon";
+import Leaderboard from "../pages/Student/Leaderboard";
+import Certificates from "../pages/Student/Certificates";
+import Profile from "../pages/Student/Profile";
+import Settings from "../pages/Student/Settings";
+import ScienceAdventure from "../pages/Student/ScienceAdventure";
+import SpinAndLearn from "../pages/Student/SpinAndLearn";
 
 
 // Protected Route
